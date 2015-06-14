@@ -1,0 +1,32 @@
+%\renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
+%\bibliographystyle{unsrt} 
+\chapter{緒論}
+\label{cha:intro} 
+
+網路發展興盛至今，小至個人，大至政府單位與各機關組織，都相當仰賴網路的使用，但許多人仍然對資安危機意識較低，針對資訊安全產品的投資也相對較少，加上對於資訊安全軟體工具缺乏有系統的整理，以致於未能有效運用。為此，本手冊蒐集整理相關開放源碼（Open Source）的資訊安全軟體工具，並透過專業人員實際操作演練，加以彙整並集結成冊，希冀透過本手冊的幫助，不僅能給予初學者對於資安工具軟體初步認識，也讓資訊從業人員在資訊安全工具上能有更多的選擇與應用。
+
+資安開放源碼軟體的發展，往往會公開其發展技術及運用的原理，配合程式碼的開放，使得開放源碼軟體具有相當大的彈性，並根據個人使用情況所需，進行軟體的編修與整合，以求適應各種作業環境所需。使用開放源碼軟體所需負擔的金錢成本，遠低於商業付費軟體，可降低企業組織對資訊科技產品的部分支出，不需要過度仰賴軟體製造商的技術支援與更新，也能減少相對應的軟體開發時程~\cite{GarofalakisHM07}。由於目前多數的資安開放源碼軟體的開發多為國外組織，因此較缺乏中文化介面，且部分軟體工具的使用，需要具備相當程度的專業知識~\cite{MaddenFHH02}，並非人人皆可輕易上手。本手冊擬透過中文化的工具介紹，減緩國內使用者入門的負擔。
+
+由於現今網路環境日益複雜，遭受網路攻擊的事件層出不窮，網路安全越來越受到各界重視。網路掃描是網路安全的根本，也是攻擊者對目標主機進行攻擊的首要步驟，因此，了解網路掃描的攻擊與防禦，將有助於網路管理者提升網域的安全管理。此外，網路流量代表所有網路訊息的傳送，能提供管理者即時了解網路狀況，藉此檢視網路情況正常與否。本手冊將針對以上兩類的開放源碼軟體，逐一介紹其功能、安裝、操作與軟體評比，令讀者對相關的資訊軟體能有所了解，並進一步應用於資訊安全的監測與控管。以下即對網路掃描及流量監控兩大類軟體，進行整理與原理說明~\cite{KotiVDSD07, SubrPPKG06, ShengLMJ07, Wagner04}。
+	
+Insecure.org網站曾於2003年及2006年間調查各使用者喜愛的工具軟體，其中2006年收到3,243位受訪者的回覆，受訪對象涵括各界對資安工具有持續研究與發展的學者及廠商，包括Insecure.org自身、研究網際網路議題的機構、發展開放源碼軟體的組織，與其他著名的資安網站（如Open Source Security、Honeypots和IDS Focus等），並根據調查結果選出前100大網路安全工具（Top 100 Network Security Tools）。本手冊從中篩選了數套較廣泛應用且屬於開放源碼的工具軟體進行蒐集整理，以提供使用者參考學習使用。以下針對各工具軟體予以介紹相關的資訊安全基礎知識（包括專業術語解釋、專有名詞解析）、軟體安裝與使用方式，以及防駭相關知識。使用者將能透過本手冊掌握並熟悉更多相關熱門工具，且對資訊安全攻防技術有更進一步的認識。如表~\ref{tab:system}所示。 
+
+
+\begin{table}[t!]
+  \begin{center}
+    \caption{The relation of aggregation overhead between different techniques}
+    \label{tab:system}
+    \begin{tabular}{|c|c c c|}
+      \hline
+       & Space usage & Communication & Query \\
+       & of root aggregator & overhead & requirement \\
+      \hline
+      Traditional warehouse & $n$ & $O(n)$ & $O(n)$ \\
+      \hline
+      AM-FM sketch technique & $\log a$ & $O(\log n)$ &  $O(a\log n)$ \\
+      \hline
+      ``prototypical PHI query'' & $\log a$ & $O(\log n)$ & $O(\log n)$ \\
+      \hline
+      \end{tabular}
+  \end{center}
+\end{table}

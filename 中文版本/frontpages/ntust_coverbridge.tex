@@ -1,0 +1,128 @@
+%
+% this file is encoded in utf-8
+% v1.7
+
+\documentclass[landscape,12pt]{article}
+
+% 如果使用 latex + dvipdfmx 工作流程，要特別使用 -l 來指定 landscape 排版
+%   dvipdfmx -l yzu_coverbridge.dvi
+%
+% pdflatex 工作流程則自動選定 landscape 排版
+%
+% 需要 LaTeX CJK 套件 4.6.0 或更新的版本
+% 
+\usepackage{CJK}
+
+\usepackage{geometry}
+\geometry{verbose,a4paper,landscape, tmargin=2.5cm, bmargin=3cm, lmargin=2.5cm, rmargin=3cm}
+
+
+\ifx\pdfoutput\undefined
+  % not running pdftex
+  \usepackage[dvipdfm]{graphicx}
+\else
+  \ifx\pdfoutput\relax
+    % not running pdftex
+    \usepackage[dvipdfm]{graphicx}
+  \else
+    % running pdftex, with...
+    \ifnum\pdfoutput>0
+      % ... PDF output
+      \usepackage[pdftex]{graphicx}
+    \else
+      %...DVI output
+      \usepackage[dvipdfm]{graphicx}
+    \fi
+  \fi
+\fi
+
+
+\usepackage{rotating} %旋轉「畢業年份」阿拉伯數字所需之套件
+\usepackage{CJKvert} %旋轉中文字所需之套件
+
+\parindent = 0Pt  % 段首內縮由 CJK 控制，所以這裡就設成不內縮
+
+\begin{document}
+\thispagestyle{empty} % no page number
+%
+\begin{CJK}{UTF8}{bkai} 
+%所選之中文字體須有配合直排之 .fdx 檔，否則所穿插的英、數符號與中文字會對不齊
+%
+% varible place holders
+% 此處只是預設值，不需更改此處
+% 請更改 my_names.tex 內容
+
+\newcommand\cTitle{}
+\newcommand\eTitle{}
+\newcommand\myCname{}
+\newcommand\myEname{}
+\newcommand\advisorCnameA{}
+\newcommand\advisorEnameA{}
+\newcommand\advisorCnameB{}
+\newcommand\advisorEnameB{}
+\newcommand\advisorCnameC{}
+\newcommand\advisorEnameC{}
+\newcommand\univCname{}
+\newcommand\univEname{}
+\newcommand\deptCname{}
+\newcommand\fulldeptEname{}
+\newcommand\deptEname{}
+\newcommand\collEname{}
+\newcommand\degreeCname{}
+\newcommand\degreeEname{}
+\newcommand\cYear{}
+\newcommand\cMonth{}
+\newcommand\eYear{}
+\newcommand\eMonth{}
+\newcommand\ePlace{}
+
+%
+% 中文直排 (反時鐘旋轉每一中文字 90 度)
+\CJKvert
+%
+% font size:
+% \large (14pt) < \Large (18pt) < \LARGE (20pt) < \huge (24pt)< \Huge (24 pt)
+%
+% 重新定義中文字距，避免旋轉後之中文字過密
+\renewcommand{\CJKglue}{\hskip 0.5pt plus 0.08\baselineskip}
+%
+% 取得個人資料
+\input{my_names.tex}
+%
+%
+%
+% 開始排版
+%
+%
+% 口試年份 (畢業級別)
+\makebox[1cm][l]{%
+\begin{sideways}\GraduationClass\end{sideways}%
+}%
+%
+% 顯示論文種類
+\makebox[2.5cm][c]{\Large{\degreeCname 論文}}%
+%
+\hfill
+% 論文篇名 (如果篇名太長，會自動折行)
+% 因為旋轉後的中文，在 makebox 與 parbox 裏的基線有些微差距 (原因不明)，使得以 parbox 編排的論文篇名與校所名會比其他以 makebox 編排的部分低 (直立後偏左)。所以用 raisebox 微調
+\newcommand\myFineTune{1.75pt} % 微調偏移量
+%
+\raisebox{\myFineTune}{\parbox{13.5cm}{\renewcommand\baselinestretch{0.5}\Large{\cTitle}}%
+}
+\hfill
+%
+% 校、所名
+\raisebox{\myFineTune}{%
+\parbox{3.1cm}{% 校名與系所名要很靠近，所以用 \tiny 小號字體取得小行距
+\tiny \makebox[3cm][s]{\small{\univCname}}\\%
+\makebox[3cm][s]{\footnotesize{\deptCname}}%
+}%
+}%
+%
+%
+\hspace{0.8cm}
+%
+\makebox[2cm][s]{\Large{\myCname}}%
+%
+\end{CJK}
+\end{document} 

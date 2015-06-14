@@ -1,0 +1,107 @@
+
+
+
+% 除非校方修改了論文格式 (margins, header, footer, 浮水印)
+% 或者需要增加所用的 LaTeX 套件，
+% 或者要改預設中文字型、編碼
+% 否則毋須修改本檔內容
+% 論文撰寫，請修改以 my_  開頭檔名的各檔案
+
+
+
+
+\usepackage[nospace]{cite}  % for smart citation
+\usepackage{geometry}  % for easy margin settings
+%\usepackage{subfigure}  % for subfigure  因為有衝突
+%\usepackage[dvipdfm]{graphicx}  % for graphic   using eps
+\usepackage[xetex]{graphicx}
+%\usepackage{graphicx}  % for graphic   using eps
+
+%\usepackage{epstopdf} % 當使用pdflatex時打開，如使用latex則不需開啟，此功能為將xxx.eps 自動判讀為XXX.pdf
+
+
+%\usepackage{algorithmic}  %演算法使用
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+%
+% margins setting
+\geometry{verbose,a4paper,tmargin=3.5cm,bmargin=2cm,lmargin=3cm,rmargin=3cm}
+%
+\usepackage{amsmath} % 各式 AMS 數學功能
+%\usepackage{amssymb} % 各式 AMS 數學符號 (如果amssymb和Xunicode產生衝突，請將amssymb移到最前面)
+\usepackage{mathrsfs} %草寫體數學符號，在數學模式裡用 \mathscr{E} 得草寫 E
+\usepackage{listings} % 程式列表套件
+%
+% listing setting
+\lstset{breaklines=true,% 過長的程式行可斷行
+extendedchars=false,% 中文處理不需要 extendedchars
+texcl=true,% 中文註解需要有 TeX 處理過的 comment line, 所以設成 true
+comment=[l]\%\%,% 以雙「百分號」做為程式中文註解的起頭標記，配合 MATLAB
+basicstyle=\small,% 小號字體, 約 10 pt 大小
+commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改用正體
+%language=Octave % 會將一些 octave 指令以粗體顯示
+}
+
+\usepackage{url} % 在文稿中引用網址，可以用 \url{http://www.ntust.edu.tw} 方式
+
+% 插圖套件 graphicx
+% 使用者工作流程是用 pdftex 還是 latex + dvipdfmx?
+% 視情況而有不同的參數
+% 這裡作自動判斷
+% 參考自
+% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ifpdf
+%\newcommand\mydvipdfmxflow{dvipdfmx}
+%\newcommand\mypdftexflow{pdftex}
+%
+%\ifx\pdfoutput\undefined
+%  % not running pdftex
+%  \usepackage[dvipdfm]{graphicx}
+%  \newcommand\myworkflow{dvipdfmx}  % set the flag for hyperref
+%\else
+%  \ifx\pdfoutput\relax
+%    % not running pdftex
+%    \usepackage[dvipdfm]{graphicx}
+%    \newcommand\myworkflow{dvipdfmx}  % set the flag
+%  \else
+%    % running pdftex, with...
+%    \ifnum\pdfoutput>0
+%      % ... PDF output
+%      \usepackage[pdftex]{graphicx}
+%      \newcommand\myworkflow{pdftex}  % set the flag
+%    \else
+%      %...DVI output
+%      \usepackage[dvipdfm]{graphicx}
+%      \newcommand\myworkflow{dvipdfmx}  % set the flag
+%    \fi
+%  \fi
+%\fi
+
+\usepackage{fancyhdr}  % 借用增強功能型 header 套件來擺放浮水印 
+% (佔用了 central header)
+% 不需要浮水印的使用者仍可利用此套件，產生所需的 header, footer
+%
+% 啟動 fancy header/footer 套件
+\pagestyle{fancy}
+\fancyhead{}  % reset left, central, right header to empty
+\fancyfoot[C]{\thepage} %中間 footer 擺放頁碼
+\renewcommand{\headrulewidth}{0pt} % header 的直線; 0pt 則無線
+
+% 如果不需要任何浮水印，則請把下列介於 >>> 與 <<< 之間
+% 的文字行關掉 (行首加上百分號)
+%% 浮水印 >>> 
+\input{watermark/ntust_watermark.tex}
+%% <<< 浮水印
+
+
+
+% global page layout
+\newcommand{\mybaselinestretch}{1.5}  %行距 1.5 倍 + 20%, (約為 double space)
+\renewcommand{\baselinestretch}{\mybaselinestretch}  % 論文行距預設值
+\parskip=2ex  % 段落之間的間隔為兩個 x 的高度
+\parindent = 24Pt  % 段首內縮由 CJK 控制，所以這裡就設成不內縮
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  end of preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

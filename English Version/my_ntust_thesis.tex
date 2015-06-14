@@ -1,0 +1,95 @@
+% this file is encoded in utf-8
+% v1.7
+
+\documentclass[12pt, a4paper]{ntust_report} 
+
+\usepackage{amssymb}
+%\usepackage{libertine}
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%\usepackage{kpfonts}
+%\usepackage[sc]{mathpazo}
+%\usepackage{microtype}
+%\usepackage{slantsc}% http://ctan.org/pkg/slantsc
+
+\usepackage{fontspec}   %加這個就可以設定字體 
+\usepackage{xeCJK}       %讓中英文字體分開設置 
+%\usepackage[indentfirst=true]{xeCJK}
+%\setmainfont{Arial}            %設定主要字型，也就是英文字型 
+\setmainfont[Mapping=tex-text]{Times New Roman}
+%\setmainfont{Linux Libertine O}
+%\setmainfont{Junicode}
+%\setCJKmainfont{DFKai-SB}     %設定中文字型 
+\setCJKmainfont{BiauKai}
+\XeTeXlinebreaklocale "zh"                %這兩行一定要加，中文才能自動換行 
+\XeTeXlinebreakskip = 0pt plus 1pt       %這兩行一定要加，中文才能自動換行
+
+
+
+\input{common_env}  %基本的環境設定  無需改變  
+%自己需要的package，可以需要增刪
+\usepackage{subfig}
+\usepackage{tabularx}
+\usepackage{amsfonts}
+\usepackage{comment}
+\usepackage{slashbox}
+\usepackage{rotating}
+\usepackage{booktabs,threeparttable}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\usepackage{pdfpages}
+%\usepackage{bold-extra}
+
+
+
+\begin{document}
+
+
+
+	\input{chinese_trans} %在此檔案處定義文章中的中文名詞
+
+	%----------------------------------------------------------------------------------------------------------------------------------------------------------
+	%%% 以下是載入前頁、本文、後頁
+	% 此行請勿更動
+
+	%----------------------------------------------------------------------------------------------------------------------------------------------------------
+	% front matter 前頁
+	% 包括封面、書名頁、中文摘要、英文摘要、誌謝、目錄、表目錄、圖目錄、符號說明
+	% 在撰寫各章草稿時，可以把此部份「關掉」，以節省無謂的編譯時間。
+	% 實際內容由
+	%    my_names.tex, my_cabstract.tex, my_eabstract.tex, my_ackn.tex, my_symbols.tex
+	% 決定
+	% ntust_frontpages.tex 此檔只提供整體架構的定義，不需更動
+	% 在撰寫各章草稿時，可以把此部份「關掉」，以節省無謂的編譯時間。
+	
+	\input{frontpages/ntust_frontpages.tex} 
+
+
+
+
+	%----------------------------------------------------------------------------------------------------------------------------------------------------------
+	% main body 論文主體。建議以「章」為檔案分割的依據。
+	% 以下為建議的命名分類
+	%   introduction.tex   related_work.tex  protocol.tex  evaluation.tex  conclusion.tex
+	% 做為這幾個「章」的檔案名稱，並將檔案存放於資料夾 sections/ 下
+	% 實際命名方式可以隨你意
+	% 在撰寫各章草稿時，可以把其他章節關掉 (行首加百分號)
+	%\input{example/example_body.tex}  % 所附的範例
+
+	\input{sections/introduction.tex}
+	\input{sections/method.tex}
+	
+	\input{sections/conclusion.tex}
+	%----------------------------------------------------------------------------------------------------------------------------------------------------------
+	% back pages 後頁
+	% 包括參考文獻、附錄、自傳
+	% 實際內容由
+	%    my_bib.bib, my_appendix.tex, my_vita.tex
+	% 決定
+	% ntust_backpages.tex 此檔只提供整體架構的定義，不需更動
+	% 在撰寫各章草稿時，可以把此部份「關掉」，以節省無謂的編譯時間。
+	\input{backpages/ntust_backpages.tex}
+
+
+
+\end{document} 
+ 

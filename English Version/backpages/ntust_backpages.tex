@@ -1,0 +1,47 @@
+%
+% this file is encoded in utf-8
+% v1.7
+
+%%% 參考文獻
+\newpage
+\addcontentsline{toc}{chapter}{\nameRef}
+\renewcommand{\bibname}{\protect\makebox[5cm][s]{\nameRef}}
+%  \makebox{} is fragile; need protect
+\bibliographystyle{ieeetr}  % 使用 IEEE Trans 期刊格式
+{\footnotesize
+\bibliography{my_bib}  %reference 所需的bib檔
+}
+
+%%% 附錄
+%\input{backpages/my_appendix.tex}
+
+%%% 自傳
+%\newpage
+%\chapter*{\protect\makebox[5cm][s]{\nameVita}} % \makebox{} is fragile; need protect
+%\addcontentsline{toc}{chapter}{\nameVita}
+%\input{backpages/my_vita.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       授權書 (計頁碼，但不印頁碼) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% insert the printed standard form when the thesis is ready to bind
+% 在口試完成後，再將已簽名的授權書放入以便裝訂
+% create an entry in table of contents for 授權書
+% 目前送出空白頁
+
+\newpage{\thispagestyle{empty}\addcontentsline{toc}{chapter}{\nameCopyrightForm}\mbox{}\clearpage}
+
+%\includepdf{backpages/a.pdf}{\addcontentsline{toc}{chapter}{\nameCopyrightForm}}
+
+
+%%%%% useless %%%%%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=\paperwidth]{backpages/LetterofAuthority.pdf}
+%\end{figure}
+%\includepdf[addtotoc={1,chapter,-1,\nameCopyrightForm,letter}]{backpages/LetterofAuthority.pdf}
+%\includepdf{backpages/LetterofAuthority.pdf}
+%\addcontentsline{toc}{chapter}{\nameCopyrightForm}\mbox{}
