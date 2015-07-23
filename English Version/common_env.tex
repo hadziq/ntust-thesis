@@ -1,26 +1,20 @@
+% Unless school modifies the thesis format (margins, header, footer, watermark)
+% or needs to improve the use of LaTeX packages,
+% or needs to change the default fonts or the encoding,
+% then no need to modify the content inside this file.
+% For thesis writing personalization, please modify the files starting with 'my_'
 
-
-
-% 除非校方修改了論文格式 (margins, header, footer, 浮水印)
-% 或者需要增加所用的 LaTeX 套件，
-% 或者要改預設中文字型、編碼
-% 否則毋須修改本檔內容
-% 論文撰寫，請修改以 my_  開頭檔名的各檔案
-
-
-
-
-\usepackage[nospace]{cite}  % for smart citation
-\usepackage{geometry}  % for easy margin settings
-%\usepackage{subfigure}  % for subfigure  因為有衝突
-%\usepackage[dvipdfm]{graphicx}  % for graphic   using eps
+\usepackage[nospace]{cite}  		% for smart citation
+\usepackage{geometry}  				% for easy margin settings
+%\usepackage{subfigure}  			% for subfigure
+%\usepackage[dvipdfm]{graphicx}  	% for graphic using eps
 \usepackage[xetex]{graphicx}
-%\usepackage{graphicx}  % for graphic   using eps
+%\usepackage{graphicx}  			% for graphic using eps
 
-%\usepackage{epstopdf} % 當使用pdflatex時打開，如使用latex則不需開啟，此功能為將xxx.eps 自動判讀為XXX.pdf
+%\usepackage{epstopdf} 				% for automatic transformation (eps to pdf) while using pdflatex
 
 
-%\usepackage{algorithmic}  %演算法使用
+%\usepackage{algorithmic}  			% for algorithm
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
@@ -29,22 +23,24 @@
 % margins setting
 \geometry{verbose,a4paper,tmargin=3.5cm,bmargin=2cm,lmargin=3cm,rmargin=3cm}
 %
-\usepackage{amsmath} % 各式 AMS 數學功能
-%\usepackage{amssymb} % 各式 AMS 數學符號 (如果amssymb和Xunicode產生衝突，請將amssymb移到最前面)
-\usepackage{mathrsfs} %草寫體數學符號，在數學模式裡用 \mathscr{E} 得草寫 E
-\usepackage{listings} % 程式列表套件
+\usepackage{amsmath} 				% for mathematical function (AMS Format)
+%\usepackage{amssymb} 				% for mathematical symbol (AMS Format)
+										% if 'amssymb' and 'Xunicode' conflict, please put 'amssymb' beforehand
+\usepackage{mathrsfs} 				% for cursive mathematical symbol,
+										% for example, typing '\mathscr{E} may result 'cursive E'
+\usepackage{listings} 				% for listing any programming code
 %
 % listing setting
-\lstset{breaklines=true,% 過長的程式行可斷行
-extendedchars=false,% 中文處理不需要 extendedchars
-texcl=true,% 中文註解需要有 TeX 處理過的 comment line, 所以設成 true
-comment=[l]\%\%,% 以雙「百分號」做為程式中文註解的起頭標記，配合 MATLAB
-basicstyle=\small,% 小號字體, 約 10 pt 大小
-commentstyle=\upshape,% 預設是斜體字，會影響註解裏的英文，改用正體
-%language=Octave % 會將一些 octave 指令以粗體顯示
+\lstset{breaklines=true,			% a long line of code can be broken into lines of code
+extendedchars=false,				
+texcl=true,							
+comment=[l]\%\%,					
+basicstyle=\small,					% approximately 10 pt
+commentstyle=\upshape,				% the default is 'italics', so set it upright
+%language=Octave 					% some 'octave' instruction will appear in bold
 }
 
-\usepackage{url} % 在文稿中引用網址，可以用 \url{http://www.ntust.edu.tw} 方式
+\usepackage{url} 					% for trackbacking URL in the document; usage: \url{http://www.ntust.edu.tw}
 
 % 插圖套件 graphicx
 % 使用者工作流程是用 pdftex 還是 latex + dvipdfmx?
