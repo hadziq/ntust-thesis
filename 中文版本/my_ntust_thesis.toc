@@ -1,0 +1,16 @@
+\contentsline {chapter}{論文摘要}{I}
+\contentsline {chapter}{Abstract}{II}
+\contentsline {chapter}{誌謝}{III}
+\contentsline {chapter}{目錄}{IV}
+\contentsline {chapter}{圖目錄}{V}
+\contentsline {chapter}{表目錄}{VI}
+\contentsline {chapter}{\numberline {1}緒論}{1}
+\contentsline {chapter}{\numberline {2}Preliminaries}{3}
+\contentsline {chapter}{\numberline {3}研究方法}{4}
+\contentsline {chapter}{\numberline {4}實驗設計}{5}
+\contentsline {chapter}{\numberline {5}實驗結果與分析}{6}
+\contentsline {chapter}{\numberline {6}結論與後續工作}{7}
+\contentsline {section}{\numberline {6.1}Future Work}{7}
+\contentsline {chapter}{參考文獻}{8}
+\contentsline {chapter}{授權書}{9}
+\contentsfinish 

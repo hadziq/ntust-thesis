@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ./my_ntust_thesis.aux
+The style file: ieeetr.bst
+Database file #1: my_bib.bib
+Warning--can't use both volume and number fields in MaddenFHH02
+You've used 6 entries,
+            1876 wiz_defined-function locations,
+            532 strings with 5057 characters,
+and the built_in function-call counts, 2184 in all, are:
+= -- 203
+> -- 77
+< -- 0
++ -- 28
+- -- 22
+* -- 179
+:= -- 289
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 121
+empty$ -- 218
+format.name$ -- 22
+if$ -- 541
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 29
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 85
+stack$ -- 0
+substring$ -- 159
+swap$ -- 51
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 19
+width$ -- 7
+write$ -- 68
+(There was 1 warning)

@@ -1,18 +1,17 @@
 % Unless school modifies the thesis format (margins, header, footer, watermark)
 % or needs to improve the use of LaTeX packages,
 % or needs to change the default fonts or the encoding,
-% then no need to modify the content inside this file.
+% then there is no need to modify the content inside this file.
 % For thesis writing personalization, please modify the files starting with 'my_'
 
 \usepackage[nospace]{cite}  		% for smart citation
 \usepackage{geometry}  				% for easy margin settings
 %\usepackage{subfigure}  			% for subfigure
 %\usepackage[dvipdfm]{graphicx}  	% for graphic using eps
-\usepackage[xetex]{graphicx}
+%\usepackage[xetex]{graphicx}
 %\usepackage{graphicx}  			% for graphic using eps
 
-%\usepackage{epstopdf} 				% for automatic transformation (eps to pdf) while using pdflatex
-
+\usepackage{epstopdf} 				% for automatic transformation (eps to pdf) while using pdflatex
 
 %\usepackage{algorithmic}  			% for algorithm
 \usepackage{algorithm}
@@ -42,12 +41,13 @@ commentstyle=\upshape,				% the default is 'italics', so set it upright
 
 \usepackage{url} 					% for trackbacking URL in the document; usage: \url{http://www.ntust.edu.tw}
 
-% 插圖套件 graphicx
-% 使用者工作流程是用 pdftex 還是 latex + dvipdfmx?
-% 視情況而有不同的參數
-% 這裡作自動判斷
-% 參考自
-% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ifpdf
+% Illustration package: graphicx
+	% whether users using 'pdftex' or 'latex + dvipdfmx' for their workflow?
+	% each case may have different parameters
+	% the following automatic decision
+	% refered from
+	% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=ifpdf
+
 %\newcommand\mydvipdfmxflow{dvipdfmx}
 %\newcommand\mypdftexflow{pdftex}
 %
@@ -74,29 +74,27 @@ commentstyle=\upshape,				% the default is 'italics', so set it upright
 %  \fi
 %\fi
 
-\usepackage{fancyhdr}  % 借用增強功能型 header 套件來擺放浮水印 
-% (佔用了 central header)
-% 不需要浮水印的使用者仍可利用此套件，產生所需的 header, footer
+\usepackage{fancyhdr}  				% Extra package for putting the watermark
+% (Occupy central header)
+% Users who do not need watermark can still utilize this package to produce the desired header and footer
 %
-% 啟動 fancy header/footer 套件
+% Start fancy header/footer package
 \pagestyle{fancy}
-\fancyhead{}  % reset left, central, right header to empty
-\fancyfoot[C]{\thepage} %中間 footer 擺放頁碼
-\renewcommand{\headrulewidth}{0pt} % header 的直線; 0pt 則無線
+\fancyhead{}  						% reset left, central, right header to empty
+\fancyfoot[C]{\thepage} 			% middle footer for page number
+\renewcommand{\headrulewidth}{0pt} 	% header straight line; 0pt (no line)
 
-% 如果不需要任何浮水印，則請把下列介於 >>> 與 <<< 之間
-% 的文字行關掉 (行首加上百分號)
+% Just in case do not need the watermark, please comment the following '\input' line
 %% 浮水印 >>> 
-\input{watermark/ntust_watermark.tex}
+%\input{watermark/ntust_watermark.tex}
 %% <<< 浮水印
 
-
-
+%
 % global page layout
-\newcommand{\mybaselinestretch}{1.5}  %行距 1.5 倍 + 20%, (約為 double space)
-\renewcommand{\baselinestretch}{\mybaselinestretch}  % 論文行距預設值
-\parskip=2ex  % 段落之間的間隔為兩個 x 的高度
-\parindent = 24Pt  % 段首內縮由 CJK 控制，所以這裡就設成不內縮
+\newcommand{\mybaselinestretch}{1.5}  					% Line space: 1.5 times + 20%, (approximately double space)
+\renewcommand{\baselinestretch}{\mybaselinestretch}  	% Thesis line space presets
+\parskip=2ex  						% Spacing between paragraphs is equal to two heights of x
+\parindent = 24Pt  					% The retraction of first paragraph is controlled by CJK, this setting cancel it
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  end of preamble

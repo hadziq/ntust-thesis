@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{MaddenFHH02}
+S.~Madden, M.~J. Franklin, J.~M. Hellerstein, and W.~Hong, ``Tag: A tiny
+  aggregation service for ad-hoc sensor networks,'' in {\em Proceedings of the
+  5th Symposium on Operating Systems Design and Implementation (OSDI)},
+  vol.~36, (Boston, Massachusetts, USA), pp.~131--146, ACM, Dec 2002.
+
+\bibitem{GarofalakisHM07}
+M.~N. Garofalakis, J.~M. Hellerstein, and P.~Maniatis, ``Proof sketches:
+  Verifiable in-network aggregation,'' in {\em Proceedings of IEEE 23rd
+  International Conference on Data Engineering (ICDE)}, (Istanbul, Turkey),
+  pp.~996--1005, Apr 2007.
+
+\bibitem{KotiVDSD07}
+Y.~Kotidis, V.~Vassalos, A.~Deligiannakis, V.~Stoumpos, and A.~Delis, ``Robust
+  management of outliers in sensor network aggregate queries,'' in {\em
+  Proceedings of the 6th ACM International Workshop on Data Engineering for
+  Wireless and Mobile Access (MobiDE)}, (Beijing, China), pp.~17--24, ACM, Jun
+  2007.
+
+\bibitem{SubrPPKG06}
+S.~Subramaniam, T.~Palpanas, D.~Papadopoulos, V.~Kalogeraki, and D.~Gunopulos,
+  ``Online outlier detection in sensor data using non-parametric models,'' in
+  {\em Proceedings of the 32nd International Conference on Very Large Data
+  Bases (VLDB)}, (Seoul, Korea), pp.~187--198, VLDB Endowment, Sep 2006.
+
+\bibitem{ShengLMJ07}
+B.~Sheng, Q.~Li, W.~Mao, and W.~Jin, ``Outlier detection in sensor networks,''
+  in {\em Proceedings of the 8th ACM International Symposium on Mobile Ad Hoc
+  Networking and Computing (MobiHoc)}, (Montreal, Quebec, Canada),
+  pp.~219--228, ACM, Sep 2007.
+
+\bibitem{Wagner04}
+D.~Wagner, ``Resilient aggregation in sensor networks,'' in {\em Proceedings of
+  the 2nd ACM Workshop on Security of Ad Hoc and Sensor Networks (SASN)},
+  (Washington DC, USA), pp.~78--87, ACM, Oct 2004.
+
+\end{thebibliography}
