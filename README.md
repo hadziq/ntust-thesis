@@ -25,11 +25,11 @@ In order to generate the correct files, please ensure that it goes through 4 fou
 ### 中文說明
 本範本是由元智大學碩博士論文latex範本改編而來，目前主要是修改了以下幾個東西：
 
-1.浮水印
-2.封面格式
-3.加入教授推薦書頁面
-4.刪除無用的頁面
-5.更改檔案結構
+1. 浮水印
+2. 封面格式
+3. 加入教授推薦書頁面
+4. 刪除無用的頁面
+5. 更改檔案結構
 
 在進行論文寫作時，只需改變所有檔名為 **my_XXXXXXX.XXX** 之文件。
 本tex之主結構檔為 **my_ntust_thesis.tex**。
