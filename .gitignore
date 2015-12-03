@@ -141,3 +141,7 @@ pythontex-files-*/
 # endfloat
 *.ttt
 *.fff
+
+# extra
+*.lb
+*.DS_Store
