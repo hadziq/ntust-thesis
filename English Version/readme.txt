@@ -10,13 +10,13 @@ While writing the thesis, please change every document whose name is my_xxxxxxx.
 
 This TeX’s main file is my_ntust_thesis.tex.
 
-Among everything that needs to be modified is in document named frontpages and backpages.
+Among all the files you need to edit, the most important parts are in frontpage andbackpage folder.
 
 Please classify the thesis’ main structure and content into the related sections’ directory and table of contents.
 
 Please put the references (BibTeX) onto the first layer of my_bib.bib
 
-In order to generate the correct files, please ensure that it goes through four times compilation, otherwise the table of contents and the bibliography would be messed up.
+In order to generate the correct files, please ensure that it goes through 4 four steps compilation process, otherwise the table of contents and the bibliography would be messed up.
 
 pdflatex + bibtex + pdflatex + pdflatex
 
