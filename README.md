@@ -41,3 +41,5 @@ references的bibtex檔請放置於目錄第一層之 **my_bib.bib** 。
 
 > pdflatex + bibtex + pdflatex + pdflatex
 
+CREDITS to the Original Author, my Senior in CNS Laboratory: Ding-Jie Huang 黃鼎傑
+(Website: http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html)
