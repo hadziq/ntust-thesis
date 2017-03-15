@@ -26,7 +26,7 @@ For Mac Users (using MacTeX)
 For Windows Users (using MiKTeX)
 > xelatex + bibtex + xelatex + xelatex
 
-p.s. Before running aforementioned commands, please run "MiKTeX Update (Admin)" and also install Font "標楷體.ttf" in advance.
+p.s. Before running above commands, please run "MiKTeX Update (Admin)" and also install Font "標楷體.ttf" in advance.
 
 ### 中文說明
 本範本是由元智大學碩博士論文latex範本改編而來，目前主要是修改了以下幾個東西：
