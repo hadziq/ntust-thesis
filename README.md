@@ -25,6 +25,7 @@ For Mac Users (using MacTeX)
 
 For Windows Users (using MiKTeX)
 > xelatex + bibtex + xelatex + xelatex
+
 p.s. Before running aforementioned commands, please run "MiKTeX Update (Admin)" and also install Font "標楷體.ttf" in advance.
 
 ### 中文說明
@@ -49,6 +50,7 @@ references的bibtex檔請放置於目錄第一層之 **my_bib.bib** 。
 
 在 Windows 使用 (利用 MiKTeX)
 > xelatex + bibtext + xelatex + xelatex
+
 p.s. 要執行上述命令，煩請確認先更新 MiKTeX，還有安裝字體如下：“標楷體.ttf”。
 
 CREDITS to the Original Author, my Senior in CNS Laboratory: Ding-Jie Huang 黃鼎傑
