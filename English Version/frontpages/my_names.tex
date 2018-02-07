@@ -1,6 +1,15 @@
 %
-% this file is encoded in utf-8
+% This file is encoded in utf-8.
 % v1.7
+% Enter your thesis title, your name, and your personal information.
+% If the title needs to use math symbols, please use \mbox{}.
+%   For example: My Thesis Title \mbox{$\cal{H}_\infty$} and \mbox{Al$_x$Ga$_{1-x}$As}
+% If your Chinese name contains only 2 characters, please put space in between.
+% If you need to put space between name and name's title (Prof. , Dr. ), 
+%   please use tilde '~' instead of normal space ' '.
+% The default number of advisors used on this template is three (3),
+%   feel free to remove any of them as necessary.
+%
 % 填入你的論文題目、姓名等資料
 % 如果題目內有必須以數學模式表示的符號，請用 \mbox{} 包住數學模式，如下範例
 % 如果中文名字是單名，與姓氏之間建議以全形空白填入，如下範例
@@ -12,87 +21,106 @@
 %          \renewcommand\advisorCnameC{}
 %          \renewcommand\advisorEnameC{}
 
+% Thesis title (Chinese)
 % 論文題目 (中文)
-\renewcommand\cTitle{%我的碩士論文題目 
-可驗證之安全系統的應用
+% It's not necessary for foreign students to include the Chinese title on the thesis
+\renewcommand\cTitle{
+%可驗證之安全系統的應用
 }
 
+% Thesis title (Chinese)
 % 論文題目 (英文)
-\renewcommand\eTitle{%My Thesis Title  
+\renewcommand\eTitle{  
 A Verifiable Secure protocol in a Secure System 
-%My Thesis Title  \mbox{$\cal{H}_\infty$} and \mbox{Al$_x$Ga$_{1-x}$As}
+\mbox{$\cal{H}_\infty$} and \mbox{Al$_x$Ga$_{1-x}$As}
 }
 
+% My full name (Chinese)
 % 我的姓名 (中文)
-\renewcommand\myCname{王大明}
+% It's not necessary for foreign students to include the Chinese name
+%\renewcommand\myCname{王大明}
+\renewcommand\myCname{Da-Ming Wang}
 
+% My full name (English)
 % 我的姓名 (英文)
 \renewcommand\myEname{Da-Ming Wang}
 
+% My student ID
 %我的學號
 \renewcommand\myStudentID{M1915001}
 
+% My adviser's full name (Chinese)
 % 指導教授A的姓名 (中文)
 \renewcommand\advisorCnameA{陳明明 博士}
-
-% 指導教授A的姓名 (英文)
-\renewcommand\advisorEnameA{Dr.~Ming-Ming Cheng}
-
-% 指導教授B的姓名 (中文)
 \renewcommand\advisorCnameB{}
-
-% 指導教授B的姓名 (英文)
-\renewcommand\advisorEnameB{}
-
-% 指導教授C的姓名 (中文)
 \renewcommand\advisorCnameC{}
 
-% 指導教授C的姓名 (英文)
+% My adviser's full name (English)
+% 指導教授A的姓名 (英文)
+\renewcommand\advisorEnameA{Dr.~Ming-Ming Cheng}
+\renewcommand\advisorEnameB{}
 \renewcommand\advisorEnameC{}
 
+% Campus' name (Chinese)
 % 校名 (中文)
 \renewcommand\univCname{國立台灣科技大學}
 
+% Campus' name (English)
 % 校名 (英文)
-%\renewcommand\univEname{National Taiwan University of science and technology}
+\renewcommand\univEname{National Taiwan University of Science and Technology}
 
+% Department's name (Chinese)
 % 系所名 (中文)
 \renewcommand\deptCname{資~訊~工~程~系}
 
+% Department's name (English)
 % 系所全名 (英文)
-%\renewcommand\fulldeptEname{Graduate School of Electro-Optical Engineering}
+\renewcommand\fulldeptEname{Graduate School of Electro-Optical Engineering}
 
+% Department's short name (English)
 % 系所短名 (英文, 用於書名頁學位名領域)
-%\renewcommand\deptEname{Electro-Optical Engineering}
+\renewcommand\deptEname{Electro-Optical Engineering}
 
+% College's name (English)
 % 學院英文名 (如無，則以空的大括號表示)
-%\renewcommand\collEname{College of Electrical and Communication Engineering}
+\renewcommand\collEname{College of Electrical and Communication Engineering}
 
+% Degree's name (Chinese)
 % 學位名 (中文)
 \renewcommand\degreeCname{碩士}
+%\renewcommand\degreeCname{博士}
 
+% Degree's name (English)
 % 學位名 (英文)
-%\renewcommand\degreeEname{Master of Science}
+\renewcommand\degreeEname{Master of Science}
+%\renewcommand\degreeEname{Doctor}
 
+% Oral exam year (Chinese, Taiwanese Year)
 % 口試年份 (中文、民國)
-\renewcommand\cYear{九十八}
+\renewcommand\cYear{一百零七}
 
+% Oral exam month (Chinese)
 % 口試月份 (中文)
-\renewcommand\cMonth{七} 
+\renewcommand\cMonth{一} 
 
-% 口試月份 (中文)
-\renewcommand\cDay{七} 
+% Oral exam date (Chinese)
+% 口試日份 (中文)
+\renewcommand\cDay{十六} 
 
+% Oral exam year (Arabic number, Gregorian Year)
 % 口試年份 (阿拉伯數字、西元)
-%\renewcommand\eYear{2009} 
+\renewcommand\eYear{2018} 
 
+% Oral exam month (English)
 % 口試月份 (英文)
-%\renewcommand\eMonth{July}
+\renewcommand\eMonth{January}
 
+% Campus' location
 % 學校所在地 (英文)
-%\renewcommand\ePlace{Taipei, Taiwan}
+\renewcommand\ePlace{Taipei, Taiwan}
 
+% Graduation year
 %畢業級別；用於書背列印；若無此需要可忽略
-\newcommand\GraduationClass{95}
+\newcommand\GraduationClass{106}
 
 %%%%%%%%%%%%%%%%%%%%%%
