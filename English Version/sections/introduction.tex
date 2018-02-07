@@ -1,12 +1,11 @@
-
 \chapter{Introduction}
-\label{cha:intro} 
+\label{cha:1_introduction} 
 
 Security in wireless sensor networks (WSNs) has become a popular research field in recent years, and node identification is considered as one of the most important issues in this field~\cite{MaddenFHH02}. In WSNs, the mechanism to create and manage node identities is usually naive and is not well protected. Thus many attack techniques, such as Sybil attacks and replication attacks, are used to exploit this vulnerability. 
 
 	Since the node identities are easy to create and change, a reliable node identification mechanism is needed in sensor networks. Currently several authentication and certification methods have been proposed to ensure the node identification. However, these approaches use cryptographic techniques, and thus inevitably increase computing overhead of sensor nodes. This chapter introduces a simple but effective method to identify a node only by measuring its clock skew.
 
-	Recently, Chen et al. revealed the possibility to fingerprint every computer in general networks by their clock skews. Murdoch's research also used clock skew as a main method to detect the identities behind the Tor network. However, there are few studies evaluating the characteristics of clock skew in WSNs~\cite{GarofalakisHM07}. In this research, we use the Flooding Time Synchronization Protocol (FTSP) to measure the time information of each mote, and successfully observe that every sensor mote does have constant and unique clock skew~\cite{KotiVDSD07, SubrPPKG06, ShengLMJ07, Wagner04}. An algorithm to group and identify clock skews of large amount of motes is proposed, and its applications like Sybil attack detection are also discussed in Table~\ref{tab:system}.
+	Recently, Chen et al. revealed the possibility to fingerprint every computer in general networks by their clock skews. Murdoch's research also used clock skew as a main method to detect the identities behind the Tor network. However, there are few studies evaluating the characteristics of clock skew in WSNs~\cite{GarofalakisHM07}. In this research, we use the Flooding Time Synchronization Protocol (FTSP) to measure the time information of each mote, and successfully observe that every sensor mote does have constant and unique clock skew~\cite{KotiVDSD07, SubrPPKG06, ShengLMJ07, Wagner04}. An algorithm to group and identify clock skews of large amount of motes is proposed, and its applications like Sybil attack detection are also discussed in Table~\ref{tab:1_system}.
 	
 	Generally, there are two steps to measure the clock skew between two devices.
 	The first step is to collect the timestamp from the sender via a certain protocol.
@@ -18,7 +17,7 @@ Security in wireless sensor networks (WSNs) has become a popular research field 
 \begin{table}[t!]
   \begin{center}
     \caption{The relation of aggregation overhead between different techniques}
-    \label{tab:system}
+    \label{tab:1_system}
     \begin{tabular}{|c|c c c|}
       \hline
        & Space usage & Communication & Query \\
