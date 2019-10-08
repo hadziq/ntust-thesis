@@ -1,9 +1,11 @@
 # ntust-thesis
+
 ntust-thesis is a LaTeX template for writing Master thesis or Ph.D dissertation in NTUST.
 
 國立台灣科技大學的論文 LaTeX 範本，可以使用次範本來寫碩士或者博士論文。
 
-### English Manual
+## English Manual
+
 This LaTeX template was made from Yuan Ze University’s thesis template with the following modification:
 
 1. Provisional watermark
@@ -23,7 +25,8 @@ In order to generate PDF correctly, please execute four steps compilation proces
 p.s.
 Please install the latest TeX engine on your computer (e.g. MacTeX for macOS, MiKTeX for Windows OS), and also install Font "標楷體.ttf" in advance.
 
-### 中文說明
+## 中文說明
+
 本範本是由元智大學碩博士論文latex範本改編而來，目前主要是修改了以下幾個東西：
 
 1. 浮水印
@@ -45,4 +48,4 @@ references的bibtex檔請放置於目錄第一層之 **my_bib.bib** 。
 p.s. 要執行上述命令，煩請確認先更新 MacTeX (macOS) 或 MiKTeX (Windows)，還有安裝字體如下：“標楷體.ttf”。
 
 CREDITS to the original author, my senior in CNS Laboratory: Ding-Jie Huang 黃鼎傑
-(Website: http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html)
+(Website: <http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html>)
