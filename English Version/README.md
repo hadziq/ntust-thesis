@@ -31,7 +31,7 @@ CREDITS to the Original Author, my Senior in CNS Laboratory: Ding-Jie Huang é»ƒé
 Extra notes for Visual Studio Code users:
 In case you are using LaTeX workshop to compile your LaTeX, please copy and paste the following toolchain scripts onto your user settings.
 
-    ``` json
+``` json
     "latex-workshop.latex.toolchain": [
       {
         "command": "xelatex",
@@ -64,4 +64,4 @@ In case you are using LaTeX workshop to compile your LaTeX, please copy and past
         ]
       }
     ]
-    ```
+```
