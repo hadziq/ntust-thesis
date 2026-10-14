@@ -40,13 +40,14 @@ jobs:
       - name: Install TeX Live and fonts
         run: |
           # Times New Roman comes from Microsoft's core fonts, which need their EULA accepted
-          echo "ttf-mscorefonts-installer msttcorefonts/accept-mscorefonts-eula select true" \
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" \
             | sudo debconf-set-selections
           sudo apt-get update
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
             texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-science \
             lmodern fonts-texgyre fontconfig poppler-utils webp ttf-mscorefonts-installer
-          fc-list | grep "Times New Roman"
+          fc-list | grep "Times New Roman" \
+            || { echo "::error::Times New Roman was not installed (see ttf-mscorefonts-installer above)"; exit 1; }
 
       - name: Build sample PDFs and previews
         env:
