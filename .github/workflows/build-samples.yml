@@ -1,0 +1,77 @@
+# Compiles both editions of the template and refreshes the sample PDFs and the
+# preview images on the GitHub Pages site.
+#
+# - Pull requests: build only, so a change that breaks compilation fails the
+#   check. The PDFs and previews are uploaded as a workflow artifact for review.
+# - Pushes to master (and manual runs on master): build, then commit the sample
+#   PDFs and previews if they changed.
+name: Build sample PDFs
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "English Version/**"
+      - "中文版本/**"
+      - "scripts/build-samples.sh"
+      - ".github/workflows/build-samples.yml"
+  pull_request:
+    paths:
+      - "English Version/**"
+      - "中文版本/**"
+      - "scripts/build-samples.sh"
+      - ".github/workflows/build-samples.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-samples-${{ github.ref }}
+  # Never cancel a master run that may be committing; superseded PR runs can go
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX Live and fonts
+        run: |
+          # Times New Roman comes from Microsoft's core fonts, which need their EULA accepted
+          echo "ttf-mscorefonts-installer msttcorefonts/accept-mscorefonts-eula select true" \
+            | sudo debconf-set-selections
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-science \
+            lmodern fonts-texgyre fontconfig poppler-utils webp ttf-mscorefonts-installer
+          fc-list | grep "Times New Roman"
+
+      - name: Build sample PDFs and previews
+        env:
+          REQUIRE_TIMES_NEW_ROMAN: "1"
+        run: scripts/build-samples.sh
+
+      - name: Upload samples
+        uses: actions/upload-artifact@v4
+        with:
+          name: samples
+          path: |
+            English Version/my_ntust_thesis.pdf
+            中文版本/my_ntust_thesis.pdf
+            assets/img/preview/*.webp
+
+      - name: Commit updated samples
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "English Version/my_ntust_thesis.pdf" "中文版本/my_ntust_thesis.pdf" assets/img/preview
+          if git diff --cached --quiet; then
+            echo "Sample PDFs and previews are already up to date."
+          else
+            git commit -m "Update sample PDFs and previews"
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
