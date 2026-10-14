@@ -23,7 +23,8 @@ In order to generate PDF correctly, please execute four steps compilation proces
 > xelatex + bibtex + xelatex + xelatex
 
 p.s.
-Please install the latest TeX engine on your computer (e.g. MacTeX for macOS, MiKTeX for Windows OS), and also install Font "標楷體.ttf" in advance.
+Please install the latest TeX engine on your computer (e.g. MacTeX for macOS, MiKTeX for Windows OS), or use Overleaf with the XeLaTeX compiler (see the main README).
+Installing the font "標楷體.ttf" is optional: if it is not installed, the bundled copy in this folder is loaded directly.
 
 CREDITS to the Original Author, my Senior in CNS Laboratory: Ding-Jie Huang 黃鼎傑
 (Website: <http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html>)

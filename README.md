@@ -27,6 +27,7 @@ A LaTeX template for Master's theses and Ph.D. dissertations at National Taiwan 
 - [Quick Start](#quick-start)
 - [Writing Your Thesis](#writing-your-thesis)
 - [Compiling](#compiling)
+- [Using Overleaf](#using-overleaf)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -77,8 +78,10 @@ ntust-thesis/
 | --- | --- |
 | A recent TeX distribution | [MacTeX](https://tug.org/mactex/) (macOS), [MiKTeX](https://miktex.org/) or [TeX Live](https://tug.org/texlive/) (Windows/Linux) |
 | XeLaTeX + BibTeX | Included in the distributions above |
-| **標楷體.ttf** (*AR PL KaitiM Big5*) | Bundled in each edition folder — install it on your system |
-| **Times New Roman** | Used as the main Latin font |
+| **標楷體.ttf** (*AR PL KaitiM Big5*) | Bundled in each edition folder and loaded directly from there — installing it is optional |
+| **Times New Roman** | Used as the main Latin font when installed; otherwise *TeX Gyre Termes* (included in TeX Live) is used |
+
+> Prefer not to install anything? Use the template on [Overleaf](#using-overleaf) instead.
 
 ### Quick Start
 
@@ -90,7 +93,7 @@ ntust-thesis/
    ```
 
 2. **Pick an edition** — `English Version/` or `中文版本/` — and work inside that folder.
-3. **Install the font** `標楷體.ttf` from that folder.
+3. *(Optional)* **Install the font** `標楷體.ttf` from that folder. If it is not installed, the bundled copy is loaded automatically.
 4. **Compile** (see [Compiling](#compiling)) and open `my_ntust_thesis.pdf`.
 
 ### Writing Your Thesis
@@ -164,12 +167,39 @@ add the recipe below to your `settings.json`.
 
 </details>
 
+### Using Overleaf
+
+[Overleaf](https://www.overleaf.com) compiles the template in your browser, so you do not need a local TeX installation or any fonts.
+
+1. **Make a ZIP of one edition.** Zip the *contents* of `English Version/` or `中文版本/`, so that `my_ntust_thesis.tex` sits at the top level of the ZIP rather than inside a folder. This keeps relative paths such as `\input{common_env}`, `figures/...`, and the bundled font working.
+
+   ```bash
+   cd "English Version"   # or: cd 中文版本
+   zip -r ../ntust-thesis-overleaf.zip .
+   ```
+
+   On Windows or macOS, open the edition folder, select everything inside it, and compress the selection.
+2. **Upload it.** On Overleaf, choose **New Project → Upload Project** and select the ZIP.
+3. **Set the compiler.** Open **Menu** and set **Compiler** to **XeLaTeX** and **Main document** to `my_ntust_thesis.tex`.
+4. **Recompile.** Overleaf runs BibTeX and the extra passes automatically, so you do not need the four-pass sequence.
+
+**Fonts on Overleaf.** The template loads the bundled `標楷體.ttf` directly. If Times New Roman is unavailable, it falls back to *TeX Gyre Termes*, a metric-compatible Times clone included in TeX Live.
+
+**Compile timeouts.** If compilation times out on a free plan, comment out the front and back pages while drafting (see the tip in [Writing Your Thesis](#writing-your-thesis)).
+
+> **Community templates.** A member of the NTUST community has also published ready-made Overleaf templates based on v1.7.1 of this template. According to its author, they add a 14pt font-size option:
+> [English version](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-english-version/xngjwvkqkrgj) ·
+> [Chinese version](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-chinese-version/hfcnjvgmchst).
+> They are maintained outside this repository and may differ from it, so check them against the latest NTUST formatting rules before you submit.
+
 ### Troubleshooting
 
 | Problem | Solution |
 | --- | --- |
-| `fontspec error: "font-not-found"` for *AR PL KaitiM Big5* | Install `標楷體.ttf` from the edition folder, then recompile. |
-| `fontspec error` for *Times New Roman* | Install Times New Roman, or change `\setmainfont{...}` in `my_ntust_thesis.tex`. |
+| `fontspec error: "font-not-found"` for `標楷體.ttf` | Keep `標楷體.ttf` in the same folder as `my_ntust_thesis.tex` (on Overleaf: the project root), or install the font. |
+| Latin text is not in Times New Roman | Times New Roman is not installed, so *TeX Gyre Termes* is used. Install Times New Roman for the exact font, or change `\setmainfont{...}` in `my_ntust_thesis.tex`. |
+| Overleaf: `File 'common_env.tex' not found` or missing figures | The project was most likely uploaded with the edition folder nested inside it. Re-upload a ZIP whose top level contains `my_ntust_thesis.tex` (see [Using Overleaf](#using-overleaf)). |
+| Overleaf: `fontspec requires either XeTeX or LuaTeX`, or CJK errors | Set **Menu → Compiler** to **XeLaTeX**. |
 | Table of contents or citations show `??` | Run the full four-pass sequence, not a single `xelatex`. |
 | `pdflatex` fails with CJK errors | This template requires **XeLaTeX**; `pdflatex` is not supported. |
 
@@ -193,7 +223,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull r
 ### 使用方式
 
 1. 選擇 `English Version/`（英文論文）或 `中文版本/`（中文論文）資料夾。
-2. 安裝該資料夾內的字體 **標楷體.ttf**，並確認已安裝 **Times New Roman**。
+2. （選用）安裝該資料夾內的字體 **標楷體.ttf**；若未安裝，範本會自動直接載入資料夾內的字體檔。若未安裝 **Times New Roman**，英文字型會改用 TeX Live 內建、字寬相容的 *TeX Gyre Termes*。
 3. 更新 TeX 環境：MacTeX (macOS)、MiKTeX 或 TeX Live (Windows / Linux)。
 4. 撰寫論文時，只需修改檔名為 **`my_XXXXXXX.XXX`** 的文件：
    - 主結構檔為 **`my_ntust_thesis.tex`**
@@ -218,6 +248,26 @@ bash my_ntust_thesis.sh
 ```
 
 > 本範本必須使用 **XeLaTeX** 編譯，不支援 `pdflatex`。
+
+### 使用 Overleaf
+
+[Overleaf](https://www.overleaf.com) 可直接在瀏覽器中編譯，無需在電腦上安裝 TeX 或任何字體。
+
+1. 將 `中文版本/`（或 `English Version/`）資料夾**內的檔案**壓縮成 ZIP，讓 `my_ntust_thesis.tex` 位於 ZIP 的最上層，而不是包在資料夾裡，這樣 `\input{common_env}`、`figures/...` 與字體檔等相對路徑才能正常運作：
+
+   ```bash
+   cd 中文版本
+   zip -r ../ntust-thesis-overleaf.zip .
+   ```
+
+2. 在 Overleaf 選擇 **New Project → Upload Project**，上傳該 ZIP。
+3. 開啟 **Menu**，將 **Compiler** 設為 **XeLaTeX**，**Main document** 設為 `my_ntust_thesis.tex`。
+4. 按下 **Recompile**。Overleaf 會自動執行 BibTeX 及多次編譯，無需手動編譯四次。
+
+> **社群範本：** 另有臺科大社群成員將本範本 v1.7.1 版發布為 Overleaf 範本，據作者說明並新增了 14pt 字體大小選項：
+> [中文版](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-chinese-version/hfcnjvgmchst) ·
+> [英文版](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-english-version/xngjwvkqkrgj)。
+> 這些範本不在本儲存庫維護，內容可能有所不同，提交論文前請以學校最新的格式規定為準。
 
 ---
 

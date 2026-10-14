@@ -22,7 +22,8 @@ references的bibtex檔請放置於目錄第一層之 **my_bib.bib** 。
 
 > xelatex + bibtext + xelatex + xelatex
 
-p.s. 要執行上述命令，煩請確認先更新 MacTeX (macOS) 或 MiKTeX (Windows)，還有安裝字體如下：“標楷體.ttf”。
+p.s. 要執行上述命令，煩請確認先更新 MacTeX (macOS) 或 MiKTeX (Windows)，或改用 Overleaf 並將編譯器設為 XeLaTeX（詳見主 README）。
+字體“標楷體.ttf”可選擇是否安裝：若未安裝，範本會直接載入本資料夾內的字體檔。
 
 CREDITS to the original author, my senior in CNS Laboratory: Ding-Jie Huang 黃鼎傑
 (Website: <http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html>)
