@@ -14,6 +14,23 @@ Figure~\ref{fig:logo} is Yuan Ze University badge. To maintain the aspect ratio 
 (This logo comes from the school web page.)
 \end{figure}
 
+How to display sub-figures?
+Figure~\ref{fig:sub_all} consists of two sub-figures, Figure~\ref{fig:sub_left} and Figure~\ref{fig:sub_right}, made with the \verb+subfigure+ environment of the \verb+subcaption+ package. Inside each \verb+subfigure+, the \verb+\label{}+ must come after \verb+\caption{}+, otherwise \verb+\ref{}+ prints ``??''. Use an empty \verb+\caption{}+ if a sub-figure should only show its letter, e.g., (a).
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
+  \centering \includegraphics[width=2cm,keepaspectratio]{frontpages/ntust_logo}
+  \caption{Left NTUST logo}
+  \label{fig:sub_left}
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+  \centering \includegraphics[width=2cm,keepaspectratio]{frontpages/ntust_logo}
+  \caption{}
+  \label{fig:sub_right}
+\end{subfigure}
+\caption{\label{fig:sub_all}Two sub-figures placed side by side.}
+\end{figure}
+
 如何顯示表格？表~\ref{tb:income_2003} 是示範簡易的 $3\times3$ 的表格，除了第一欄是中間對齊以外，第二、三欄是向右對齊。表格的標題須在表格上方。或者，使用只有橫線的表格，如表~\ref{tb:income_2003_v2}。資料的出處則註記於表格下方。
 %
 \begin{table}[htbp]

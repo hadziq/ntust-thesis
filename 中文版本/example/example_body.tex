@@ -14,6 +14,23 @@
 (This logo comes from the school web page.)
 \end{figure}
 
+如何顯示子圖？
+圖~\ref{fig:sub_all} 由兩張子圖組成：圖~\ref{fig:sub_left} 與圖~\ref{fig:sub_right}，使用 \verb+subcaption+ 套件的 \verb+subfigure+ 環境。在每個 \verb+subfigure+ 中，\verb+\label{}+ 必須放在 \verb+\caption{}+ 之後，否則 \verb+\ref{}+ 會顯示「??」。如果子圖只需要顯示 (a)、(b) 編號，可以使用空的 \verb+\caption{}+。
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
+  \centering \includegraphics[width=2cm,keepaspectratio]{frontpages/ntust_logo}
+  \caption{左圖 Left NTUST logo}
+  \label{fig:sub_left}
+\end{subfigure}
+\begin{subfigure}[b]{0.3\textwidth}
+  \centering \includegraphics[width=2cm,keepaspectratio]{frontpages/ntust_logo}
+  \caption{}
+  \label{fig:sub_right}
+\end{subfigure}
+\caption{\label{fig:sub_all}並排的兩張子圖 Two sub-figures placed side by side.}
+\end{figure}
+
 如何顯示表格？表~\ref{tb:income_2003} 是示範簡易的 $3\times3$ 的表格，除了第一欄是中間對齊以外，第二、三欄是向右對齊。表格的標題須在表格上方。或者，使用只有橫線的表格，如表~\ref{tb:income_2003_v2}。資料的出處則註記於表格下方。
 %
 \begin{table}[htbp]
