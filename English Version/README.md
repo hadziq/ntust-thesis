@@ -1,67 +1,96 @@
-# ntust-thesis
+# English Version
 
-ntust-thesis is a LaTeX template for writing Master thesis or Ph.D dissertation in NTUST.
+Use this edition if your thesis or dissertation is written in **English**.
+It produces the NTUST cover, the front pages (abstracts, acknowledgements, table of contents, lists of figures, tables, and algorithms), your chapters, and the back pages (references, appendix, and curriculum vitae).
 
-## Manual
+> Prefer to read the overview first? See the [project home page](../) or the [Chinese edition](../中文版本/README.md).
 
-This LaTeX template is a modified version. It was originally used by Yuan Ze University’s graduate students (Master and Ph.D). Following points are the most important things that had been altered in the NTUST version:
+## Before You Start
 
-1. Provisional watermark
-2. Cover format
-3. Page inclusion containing Professor’s recommendation letter
-4. Deletion on unnecessary pages
-5. Update on the file structures
+1. Install a recent TeX distribution: [MacTeX](https://tug.org/mactex/) (macOS), [MiKTeX](https://miktex.org/) or [TeX Live](https://tug.org/texlive/) (Windows/Linux).
+2. Install the font **標楷體.ttf** (*AR PL KaitiM Big5*) bundled in this folder.
+3. Make sure **Times New Roman** is installed. If it is not, change `\setmainfont{...}` in `my_ntust_thesis.tex` to a font you have, such as `TeX Gyre Termes`.
 
-While writing the thesis, please change every document whose name is **my_xxxxxxx.xxx**.  
-This TeX’s main file is **my_ntust_thesis.tex**.
-Among all the files you need to edit, the most important parts are in **frontpages** and **backpages** folder.
-Please classify the thesis’ main structure and content into its related sections’ directory and table of contents.
-Please put the references (BibTeX) onto the first layer of **my_bib.bib**.
+## Files to Edit
 
-In order to generate PDF correctly, please execute four steps compilation process (i.e. LaTeX toolchain) as follows.
+Only edit files whose names start with `my_`, plus your chapters in `sections/`.
 
-> xelatex + bibtex + xelatex + xelatex
+| What | File |
+| --- | --- |
+| Title, your name, student ID, advisors, dates | `frontpages/my_names.tex` |
+| Chinese abstract (off by default; uncomment its block in `frontpages/ntust_frontpages.tex` if required) | `frontpages/my_cabstract.tex` |
+| English abstract | `frontpages/my_eabstract.tex` |
+| Acknowledgements | `frontpages/my_ackn.tex` |
+| List of symbols | `frontpages/my_symbols.tex` |
+| Chapters | `sections/*.tex`, listed in `my_ntust_thesis.tex` |
+| References (BibTeX) | `my_bib.bib` |
+| Appendix | `backpages/my_appendix.tex` |
+| Curriculum vitae | `backpages/my_vitae.tex` |
 
-p.s.
-Please install the latest TeX engine on your computer (e.g. MacTeX for macOS, MiKTeX for Windows OS), and also install Font "標楷體.ttf" in advance.
+Files starting with `ntust_` (`ntust_report.cls`, `frontpages/ntust_frontpages.tex`, `backpages/ntust_backpages.tex`) define the official layout. Please do not modify them.
 
-CREDITS to the Original Author, my Senior in CNS Laboratory: Ding-Jie Huang 黃鼎傑
-(Website: <http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html>)
+## Compiling
 
-Extra notes for Visual Studio Code users:
-In case you are using LaTeX workshop to compile your LaTeX, please copy and paste the following toolchain scripts onto your user settings.
+The table of contents, cross-references, and bibliography need the full sequence:
 
-``` json
-    "latex-workshop.latex.toolchain": [
-      {
-        "command": "xelatex",
-        "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
-        ]
-      }, {
-        "command": "bibtex",
-        "args": [
-          "%DOCFILE%"
-        ]
-      }, {
-        "command": "xelatex",
-        "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
-        ]
-      }, {
-        "command": "xelatex",
-        "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
-        ]
-      }
-    ]
+```text
+xelatex → bibtex → xelatex → xelatex
 ```
+
+Run the build script (macOS/Linux):
+
+```bash
+bash my_ntust_thesis.sh
+```
+
+Or run the steps yourself on any platform:
+
+```bash
+xelatex my_ntust_thesis.tex
+bibtex  my_ntust_thesis
+xelatex my_ntust_thesis.tex
+xelatex my_ntust_thesis.tex
+```
+
+With `latexmk`, a single command reruns everything as needed:
+
+```bash
+latexmk -xelatex my_ntust_thesis.tex
+```
+
+### Visual Studio Code
+
+If you use the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension, add this recipe to your `settings.json`:
+
+```json
+"latex-workshop.latex.recipes": [
+  {
+    "name": "xelatex ➞ bibtex ➞ xelatex × 2",
+    "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+  }
+],
+"latex-workshop.latex.tools": [
+  {
+    "name": "xelatex",
+    "command": "xelatex",
+    "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+  },
+  {
+    "name": "bibtex",
+    "command": "bibtex",
+    "args": ["%DOCFILE%"]
+  }
+]
+```
+
+## Tips
+
+- **Faster drafts:** comment out the `\input{frontpages/...}` and `\input{backpages/...}` lines in `my_ntust_thesis.tex` while you write your chapters.
+- **Watermark:** to add the NTUST watermark, uncomment `\input{watermark/ntust_watermark.tex}` in `common_env.tex`.
+- **Approval pages:** the template inserts blank pages for the advisor's recommendation letter and the committee approval form. Replace them with the signed scans before binding.
+
+## Credits
+
+Original author: Ding-Jie Huang (黃鼎傑), CNS Laboratory, NTUST
+([NTUST Thesis LaTeX v1.5 release](http://hdj-berkeley.blogspot.tw/2011/03/ntust-thesis-latex-v15-release.html)).
+See [CONTRIBUTORS.md](../CONTRIBUTORS.md) for everyone who has helped since.
