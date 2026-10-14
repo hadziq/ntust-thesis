@@ -31,9 +31,11 @@
 
 % CJK font: AR PL KaitiM Big5 if installed, otherwise load the bundled 標楷體.ttf directly (no installation needed, e.g. on Overleaf)
 % 中文字型：已安裝 AR PL KaitiM Big5 則使用之，否則直接載入本資料夾內的 標楷體.ttf（免安裝，例如 Overleaf）
+% The Kaiti font has no bold face, so AutoFakeBold emboldens it for \textbf and bold headings
+% 楷體沒有粗體字型，因此以 AutoFakeBold 產生 \textbf 與粗體標題所需的粗體
 \IfFontExistsTF{AR PL KaitiM Big5}
-	{\setCJKmainfont{AR PL KaitiM Big5}}
-	{\setCJKmainfont[Path=./]{標楷體.ttf}}
+	{\setCJKmainfont[AutoFakeBold=4]{AR PL KaitiM Big5}}
+	{\setCJKmainfont[Path=./, AutoFakeBold=4]{標楷體.ttf}}
 \XeTeXlinebreaklocale "zh"      		% These two lines have to be added, 這兩行一定要加，中文才能自動換行 
 \XeTeXlinebreakskip = 0pt plus 1pt      % 	so that the Chinese sentence can change line automatically.
 
