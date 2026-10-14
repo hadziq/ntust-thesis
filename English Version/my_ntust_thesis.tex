@@ -42,7 +42,10 @@
 \input{common_env}		% Basic environment settings, no need to alter 基本的環境設定 無需改變  
 
 % Personal packages, you may add or delete it as necessary 自己需要的package，可以需要增刪
-\usepackage{subfig}
+\usepackage{subcaption}	% Sub-figures/sub-tables: supports both the subfigure environment and \subfloat 子圖
+						% Do not load subfig or subfigure together with it, they conflict. 請勿同時載入 subfig 或 subfigure
+						% Inside a subfigure, put \caption{} BEFORE \label{}, otherwise \ref{} prints ??
+						% 	(see example/example_body.tex). 在 subfigure 中 \label{} 必須放在 \caption{} 之後
 \usepackage{tabularx}
 \usepackage{amsfonts}
 \usepackage{comment}
