@@ -108,6 +108,7 @@ As a rule of thumb, **only edit files whose names start with `my_`** plus the ch
 | List of symbols | `frontpages/my_symbols.tex` |
 | Chapters | `sections/*.tex`, included from `my_ntust_thesis.tex` |
 | References | `my_bib.bib` |
+| Font size (`12pt` by default; `10pt`, `11pt`, and `14pt` are also available) | `\documentclass[12pt, a4paper]{ntust_report}` in `my_ntust_thesis.tex`. `14pt` needs the `extsizes` package, which is included in TeX Live and on Overleaf. |
 | Appendix / Vitae | `backpages/my_appendix.tex`, `backpages/my_vitae.tex` (`my_vita.tex` in 中文版本) |
 
 Files prefixed with `ntust_` (e.g. `ntust_frontpages.tex`, `ntust_backpages.tex`, `ntust_report.cls`) define the official layout and **should not be modified**.
@@ -187,7 +188,7 @@ add the recipe below to your `settings.json`.
 
 **Compile timeouts.** If compilation times out on a free plan, comment out the front and back pages while drafting (see the tip in [Writing Your Thesis](#writing-your-thesis)).
 
-> **Community templates.** A member of the NTUST community has also published ready-made Overleaf templates based on v1.7.1 of this template. According to its author, they add a 14pt font-size option:
+> **Community templates.** A member of the NTUST community has also published ready-made Overleaf templates derived from this template (English v1.7.1, Chinese v2.0.1). Their 14pt font-size option has been merged back into this repository:
 > [English version](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-english-version/xngjwvkqkrgj) ·
 > [Chinese version](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-chinese-version/hfcnjvgmchst).
 > They are maintained outside this repository and may differ from it, so check them against the latest NTUST formatting rules before you submit.
@@ -230,6 +231,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull r
    - 需要修改的前頁與後頁內容位於 **`frontpages/`** 及 **`backpages/`**
    - 論文各章節內容請放置於 **`sections/`** 目錄
    - 參考文獻的 BibTeX 檔請放置於第一層目錄的 **`my_bib.bib`**
+   - 字體大小預設為 12pt，可在 `my_ntust_thesis.tex` 的 `\documentclass[12pt, a4paper]{ntust_report}` 改為 `10pt`、`11pt` 或 `14pt`（14pt 需要 `extsizes` 套件，TeX Live 與 Overleaf 皆已內建）
 5. 以 `ntust_` 開頭的檔案為學校規定格式，請勿更動。
 
 ### 編譯
@@ -264,7 +266,7 @@ bash my_ntust_thesis.sh
 3. 開啟 **Menu**，將 **Compiler** 設為 **XeLaTeX**，**Main document** 設為 `my_ntust_thesis.tex`。
 4. 按下 **Recompile**。Overleaf 會自動執行 BibTeX 及多次編譯，無需手動編譯四次。
 
-> **社群範本：** 另有臺科大社群成員將本範本 v1.7.1 版發布為 Overleaf 範本，據作者說明並新增了 14pt 字體大小選項：
+> **社群範本：** 另有臺科大社群成員以本範本為基礎發布了 Overleaf 範本（英文版 v1.7.1、中文版 v2.0.1），其 14pt 字體大小選項已併入本儲存庫：
 > [中文版](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-chinese-version/hfcnjvgmchst) ·
 > [英文版](https://www.overleaf.com/latex/templates/ntust-thesis-template-1-dot-7-1-english-version/xngjwvkqkrgj)。
 > 這些範本不在本儲存庫維護，內容可能有所不同，提交論文前請以學校最新的格式規定為準。
