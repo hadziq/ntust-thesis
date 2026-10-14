@@ -24,6 +24,9 @@ Thank you for helping improve the NTUST thesis template! 歡迎大家一起改�
    ```
 
 4. **Do not commit build artifacts** (`*.aux`, `*.log`, `*.toc`, `*.xdv`, `*.bbl`, …); they are already listed in `.gitignore`.
+   Also leave the sample PDFs (`*/my_ntust_thesis.pdf`) and the preview images in `assets/img/preview/` alone.
+   The [Build sample PDFs](.github/workflows/build-samples.yml) workflow compiles both editions on every pull request and regenerates these files after merging to `master`.
+   To build them locally, run `scripts/build-samples.sh`.
 5. Keep Markdown files consistent with [markdownlint](https://github.com/DavidAnson/markdownlint) style.
 6. Add yourself to [CONTRIBUTORS.md](CONTRIBUTORS.md).
 7. Open a pull request that describes **what** changed and **why**. If the layout changed, attach a screenshot of the affected pages.
