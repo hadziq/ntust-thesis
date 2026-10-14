@@ -27,6 +27,9 @@
 | 附錄 | `backpages/my_appendix.tex` |
 | 自傳 | `backpages/my_vita.tex` |
 
+p.s. 要執行上述命令，煩請確認先更新 MacTeX (macOS) 或 MiKTeX (Windows)，或改用 Overleaf 並將編譯器設為 XeLaTeX（詳見主 README）。
+字體“標楷體.ttf”可選擇是否安裝：若未安裝，範本會直接載入本資料夾內的字體檔。
+
 以 `ntust_` 開頭的檔案（`ntust_report.cls`、`frontpages/ntust_frontpages.tex`、`backpages/ntust_backpages.tex`）為學校規定格式，請勿更動。
 
 ## 編譯

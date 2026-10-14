@@ -27,6 +27,10 @@ Only edit files whose names start with `my_`, plus your chapters in `sections/`.
 | Appendix | `backpages/my_appendix.tex` |
 | Curriculum vitae | `backpages/my_vitae.tex` |
 
+p.s.
+Please install the latest TeX engine on your computer (e.g. MacTeX for macOS, MiKTeX for Windows OS), or use Overleaf with the XeLaTeX compiler (see the main README).
+Installing the font "標楷體.ttf" is optional: if it is not installed, the bundled copy in this folder is loaded directly.
+
 Files starting with `ntust_` (`ntust_report.cls`, `frontpages/ntust_frontpages.tex`, `backpages/ntust_backpages.tex`) define the official layout. Please do not modify them.
 
 ## Compiling

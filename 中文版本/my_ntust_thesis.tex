@@ -5,9 +5,16 @@
 
 \usepackage{fontspec}   %加這個就可以設定字體 
 \usepackage{xeCJK}       %讓中英文字體分開設置 
-\setmainfont[Mapping=tex-text]{Times New Roman}            %設定主要字型，也就是英文字型 
-%\setCJKmainfont{標楷體}     %設定中文字型 
-\setCJKmainfont{AR PL KaitiM Big5} 
+%設定主要字型，也就是英文字型：已安裝 Times New Roman 則使用之，否則改用 TeX Live 內建的 TeX Gyre Termes（例如 Overleaf）
+\IfFontExistsTF{Times New Roman}
+	{\setmainfont[Mapping=tex-text]{Times New Roman}}
+	{\setmainfont[Mapping=tex-text, Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+		ItalicFont=*-italic, BoldItalicFont=*-bolditalic]{texgyretermes}}
+%\setCJKmainfont{標楷體}     %設定中文字型
+%設定中文字型：已安裝 AR PL KaitiM Big5 則使用之，否則直接載入本資料夾內的 標楷體.ttf（免安裝，例如 Overleaf）
+\IfFontExistsTF{AR PL KaitiM Big5}
+	{\setCJKmainfont{AR PL KaitiM Big5}}
+	{\setCJKmainfont[Path=./]{標楷體.ttf}}
 \XeTeXlinebreaklocale "zh"                %這兩行一定要加，中文才能自動換行 
 \XeTeXlinebreakskip = 0pt plus 1pt       %這兩行一定要加，中文才能自動換行
 
