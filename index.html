@@ -1,0 +1,383 @@
+---
+layout: default
+title: NTUST Thesis LaTeX Template
+body_class: home
+---
+{% assign repo = 'https://github.com/' | append: site.repository %}
+{% assign pdf_en = site.sample_pdf_en | relative_url %}
+{% assign pdf_zh = site.sample_pdf_zh | relative_url %}
+{% assign img = '/assets/img/preview/' | relative_url %}
+
+<!-- ============================== Hero ============================== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span data-lang="en">XeLaTeX template · Master's &amp; Ph.D.</span>
+        <span data-lang="zh">XeLaTeX 範本 · 碩士與博士論文</span>
+      </p>
+      <h1>
+        <span data-lang="en">Focus on your research. Let LaTeX handle the NTUST format.</span>
+        <span data-lang="zh">用 LaTeX 撰寫臺科大論文，把時間留給研究。</span>
+      </h1>
+      <p class="lead">
+        <span data-lang="en">A ready-to-compile template for theses and dissertations at National Taiwan University of Science and Technology. It ships with the NTUST cover, front matter, abstracts, and bibliography already laid out, in an English edition and a Chinese edition.</span>
+        <span data-lang="zh">國立臺灣科技大學碩博士論文的 LaTeX 範本，下載即可編譯。封面、前頁、摘要與參考文獻都已排版完成，並提供英文版與中文版兩種版本。</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="{{ site.download_zip }}">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+          <span data-lang="en">Download template (.zip)</span><span data-lang="zh">下載範本 (.zip)</span>
+        </a>
+        <a class="btn btn-secondary" href="{{ repo }}">
+          <span data-lang="en">View on GitHub</span><span data-lang="zh">前往 GitHub</span>
+        </a>
+      </div>
+      <p class="hero-samples">
+        <span data-lang="en">Sample output:</span><span data-lang="zh">範例輸出：</span>
+        <a href="{{ pdf_en }}">English Version (PDF)</a>
+        <span aria-hidden="true">·</span>
+        <a href="{{ pdf_zh }}">中文版本 (PDF)</a>
+      </p>
+    </div>
+    <div class="hero-art" data-lang="en" aria-hidden="true">
+      <div class="sheet sheet-3"><img src="{{ img }}en-chapter.webp" alt="" width="600" height="849"></div>
+      <div class="sheet sheet-2"><img src="{{ img }}en-contents.webp" alt="" width="600" height="849"></div>
+      <div class="sheet sheet-1"><img src="{{ img }}en-cover.webp" alt="" width="600" height="849"></div>
+    </div>
+    <div class="hero-art" data-lang="zh" aria-hidden="true">
+      <div class="sheet sheet-3"><img src="{{ img }}zh-chapter.webp" alt="" width="600" height="849"></div>
+      <div class="sheet sheet-2"><img src="{{ img }}zh-contents.webp" alt="" width="600" height="849"></div>
+      <div class="sheet sheet-1"><img src="{{ img }}zh-cover.webp" alt="" width="600" height="849"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Facts strip ============================== -->
+<section class="facts" aria-label="At a glance">
+  <div class="container facts-inner">
+    <div><strong>2</strong><span data-lang="en">editions: English &amp; 中文</span><span data-lang="zh">種版本：英文與中文</span></div>
+    <div><strong>XeLaTeX</strong><span data-lang="en">native Unicode &amp; CJK fonts</span><span data-lang="zh">原生支援 Unicode 與中文字型</span></div>
+    <div><strong>A4 · 12pt</strong><span data-lang="en">NTUST page layout</span><span data-lang="zh">臺科大論文版面</span></div>
+    <div><strong>Apache-2.0</strong><span data-lang="en">free to use &amp; adapt</span><span data-lang="zh">可自由使用與修改</span></div>
+  </div>
+</section>
+
+<!-- ============================== Features ============================== -->
+<section id="features" class="section">
+  <div class="container">
+    <header class="section-head">
+      <h2><span data-lang="en">What you get</span><span data-lang="zh">範本包含什麼</span></h2>
+      <p>
+        <span data-lang="en">Adapted from the Yuan Ze University template and tailored to NTUST requirements, so you can focus on your chapters.</span>
+        <span data-lang="zh">改編自元智大學論文範本並依臺科大規定調整，讓你專心撰寫各章內容。</span>
+      </p>
+    </header>
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z M15 3v3h3 M9 10h6 M9 14h6 M9 18h4"/></svg></div>
+        <h3><span data-lang="en">NTUST cover &amp; title page</span><span data-lang="zh">臺科大封面與書名頁</span></h3>
+        <p><span data-lang="en">Chinese and English titles, student ID, advisors, and the ROC-calendar date, all filled in from a single file.</span><span data-lang="zh">中英文題目、學號、指導教授與民國日期，只需修改一個檔案即可完成。</span></p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16 M4 10h10 M4 14h16 M4 18h10"/></svg></div>
+        <h3><span data-lang="en">Complete front matter</span><span data-lang="zh">完整的前頁</span></h3>
+        <p><span data-lang="en">Abstracts, acknowledgements, table of contents, lists of figures and tables, and a list of symbols, numbered in Roman numerals before Chapter 1.</span><span data-lang="zh">摘要、誌謝、目錄、圖目錄、表目錄與符號說明，並以羅馬數字編排頁碼。</span></p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z M9 9h6 M9 13h6"/><path d="M8 17l2 2 4-4"/></svg></div>
+        <h3><span data-lang="en">Approval page placeholders</span><span data-lang="zh">推薦書與審定書頁面</span></h3>
+        <p><span data-lang="en">Blank pages for the advisor's recommendation letter and the committee approval form, already listed in the table of contents.</span><span data-lang="zh">預留指導教授推薦書與口試委員審定書的空白頁，並已列入目錄。</span></p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7 M7.5 4v3 M5 7c0 4 3 7 6 8 M10 7c0 3-2 6-5 8"/><path d="M13 20l4-10 4 10 M14.5 16.5h5"/></svg></div>
+        <h3><span data-lang="en">Bilingual typesetting</span><span data-lang="zh">中英文混排</span></h3>
+        <p><span data-lang="en"><code>fontspec</code> + <code>xeCJK</code> set Times New Roman for Latin text and 標楷體 (<em>AR PL KaitiM Big5</em>) for Chinese.</span><span data-lang="zh">以 <code>fontspec</code> + <code>xeCJK</code> 分別設定英文字型 Times New Roman 與中文字型標楷體 (<em>AR PL KaitiM Big5</em>)。</span></p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.5c1.5-3 5.5-3 7 0"/></svg></div>
+        <h3><span data-lang="en">Optional NTUST watermark</span><span data-lang="zh">可選用的臺科大浮水印</span></h3>
+        <p><span data-lang="en">Switch on the provisional watermark with one line in <code>common_env.tex</code> when your department asks for it.</span><span data-lang="zh">系所要求時，只需在 <code>common_env.tex</code> 開啟一行即可加入浮水印。</span></p>
+      </article>
+      <article class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg></div>
+        <h3><span data-lang="en">Clean, predictable structure</span><span data-lang="zh">清楚的檔案結構</span></h3>
+        <p><span data-lang="en">Front pages, chapters, and back pages live in their own folders. Edit the <code>my_*</code> files; leave the <code>ntust_*</code> layout files alone.</span><span data-lang="zh">前頁、各章與後頁分別放在不同資料夾。只需修改 <code>my_*</code> 檔案，<code>ntust_*</code> 版面檔案請勿更動。</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Preview ============================== -->
+<section id="preview" class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <h2><span data-lang="en">See the output</span><span data-lang="zh">輸出預覽</span></h2>
+      <p>
+        <span data-lang="en">Pages from the sample PDFs compiled straight from this repository. Select a page to open it in the full PDF.</span>
+        <span data-lang="zh">以下頁面取自本倉庫直接編譯的範例 PDF。點選頁面即可開啟完整 PDF 的對應頁。</span>
+      </p>
+    </header>
+
+    <div class="tabs" data-tabs>
+      <div class="tab-list" role="tablist" aria-label="Edition">
+        <button type="button" role="tab" id="tab-ed-en" aria-controls="panel-ed-en" aria-selected="true">English Version</button>
+        <button type="button" role="tab" id="tab-ed-zh" aria-controls="panel-ed-zh" aria-selected="false">中文版本</button>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-ed-en" aria-labelledby="tab-ed-en">
+        <ul class="gallery">
+          <li><a href="{{ pdf_en }}#page=1"><img src="{{ img }}en-cover.webp" alt="Cover page of the English edition" loading="lazy" width="600" height="849"><span>Cover</span></a></li>
+          <li><a href="{{ pdf_en }}#page=4"><img src="{{ img }}en-abstract.webp" alt="English abstract page" loading="lazy" width="600" height="849"><span>Abstract</span></a></li>
+          <li><a href="{{ pdf_en }}#page=6"><img src="{{ img }}en-contents.webp" alt="Table of contents" loading="lazy" width="600" height="849"><span>Contents</span></a></li>
+          <li><a href="{{ pdf_en }}#page=10"><img src="{{ img }}en-chapter.webp" alt="First page of Chapter 1" loading="lazy" width="600" height="849"><span>Chapter 1</span></a></li>
+          <li><a href="{{ pdf_en }}#page=13"><img src="{{ img }}en-figure.webp" alt="Page with a figure and caption" loading="lazy" width="600" height="849"><span>Figures</span></a></li>
+          <li><a href="{{ pdf_en }}#page=15"><img src="{{ img }}en-references.webp" alt="References page" loading="lazy" width="600" height="849"><span>References</span></a></li>
+        </ul>
+        <p class="gallery-foot"><a class="text-link" href="{{ pdf_en }}"><span data-lang="en">Open the full English sample (15 pages)</span><span data-lang="zh">開啟完整英文版範例（15 頁）</span> →</a></p>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-ed-zh" aria-labelledby="tab-ed-zh">
+        <ul class="gallery">
+          <li><a href="{{ pdf_zh }}#page=1"><img src="{{ img }}zh-cover.webp" alt="中文版封面" loading="lazy" width="600" height="849"><span>封面</span></a></li>
+          <li><a href="{{ pdf_zh }}#page=2"><img src="{{ img }}zh-abstract.webp" alt="中文摘要" loading="lazy" width="600" height="849"><span>中文摘要</span></a></li>
+          <li><a href="{{ pdf_zh }}#page=5"><img src="{{ img }}zh-contents.webp" alt="目錄" loading="lazy" width="600" height="849"><span>目錄</span></a></li>
+          <li><a href="{{ pdf_zh }}#page=8"><img src="{{ img }}zh-chapter.webp" alt="第一章緒論" loading="lazy" width="600" height="849"><span>第 1 章</span></a></li>
+          <li><a href="{{ pdf_zh }}#page=10"><img src="{{ img }}zh-figure.webp" alt="含圖片與圖說的頁面" loading="lazy" width="600" height="849"><span>圖表</span></a></li>
+          <li><a href="{{ pdf_zh }}#page=15"><img src="{{ img }}zh-references.webp" alt="參考文獻" loading="lazy" width="600" height="849"><span>參考文獻</span></a></li>
+        </ul>
+        <p class="gallery-foot"><a class="text-link" href="{{ pdf_zh }}"><span data-lang="en">Open the full Chinese sample (16 pages)</span><span data-lang="zh">開啟完整中文版範例（16 頁）</span> →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Quick start ============================== -->
+<section id="quick-start" class="section">
+  <div class="container">
+    <header class="section-head">
+      <h2><span data-lang="en">Get started in four steps</span><span data-lang="zh">四個步驟開始撰寫</span></h2>
+    </header>
+    <ol class="steps">
+      <li>
+        <h3><span data-lang="en">Install a TeX distribution</span><span data-lang="zh">安裝 TeX 環境</span></h3>
+        <p><span data-lang="en">Use a recent</span><span data-lang="zh">請安裝最新版的</span>
+          <a href="https://tug.org/mactex/">MacTeX</a> (macOS), <a href="https://miktex.org/">MiKTeX</a>
+          <span data-lang="en">or</span><span data-lang="zh">或</span> <a href="https://tug.org/texlive/">TeX Live</a> (Windows / Linux).
+          <span data-lang="en">XeLaTeX and BibTeX are included.</span><span data-lang="zh">其中已包含 XeLaTeX 與 BibTeX。</span></p>
+      </li>
+      <li>
+        <h3><span data-lang="en">Get the template</span><span data-lang="zh">取得範本</span></h3>
+        <p><span data-lang="en"><a href="{{ site.download_zip }}">Download the ZIP</a>, fork the repository, or clone it:</span><span data-lang="zh"><a href="{{ site.download_zip }}">下載 ZIP</a>、Fork 本倉庫，或直接 clone：</span></p>
+        <pre><code>git clone https://github.com/{{ site.repository }}.git</code></pre>
+      </li>
+      <li>
+        <h3><span data-lang="en">Pick an edition &amp; install the fonts</span><span data-lang="zh">選擇版本並安裝字型</span></h3>
+        <p><span data-lang="en">Work inside <code>English Version/</code> or <code>中文版本/</code>. Install <code>標楷體.ttf</code> from that folder and make sure Times New Roman is available.</span><span data-lang="zh">在 <code>English Version/</code> 或 <code>中文版本/</code> 資料夾內作業。安裝該資料夾中的 <code>標楷體.ttf</code>，並確認系統已有 Times New Roman。</span></p>
+      </li>
+      <li>
+        <h3><span data-lang="en">Compile</span><span data-lang="zh">編譯</span></h3>
+        <p><span data-lang="en">Run the build script, then open <code>my_ntust_thesis.pdf</code>. See <a href="#compile">other ways to compile</a>.</span><span data-lang="zh">執行編譯腳本後開啟 <code>my_ntust_thesis.pdf</code>。其他方式請見<a href="#compile">編譯方式</a>。</span></p>
+        <pre><code>cd "English Version"   # or: cd 中文版本
+bash my_ntust_thesis.sh</code></pre>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== Files to edit ============================== -->
+<section id="files" class="section section-alt">
+  <div class="container split">
+    <div>
+      <header class="section-head section-head-left">
+        <h2><span data-lang="en">Which files do I edit?</span><span data-lang="zh">要修改哪些檔案？</span></h2>
+        <p>
+          <span data-lang="en">Rule of thumb: edit files whose names start with <code>my_</code>, plus your chapters in <code>sections/</code>. Files starting with <code>ntust_</code> define the official layout and should stay untouched.</span>
+          <span data-lang="zh">原則上只修改檔名以 <code>my_</code> 開頭的檔案，以及 <code>sections/</code> 中的各章檔案。以 <code>ntust_</code> 開頭的檔案為學校規定格式，請勿更動。</span>
+        </p>
+      </header>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th><span data-lang="en">What</span><span data-lang="zh">內容</span></th><th><span data-lang="en">Where</span><span data-lang="zh">檔案</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-lang="en">Title, names, advisors, dates</span><span data-lang="zh">題目、姓名、指導教授、日期</span></td><td><code>frontpages/my_names.tex</code></td></tr>
+            <tr><td><span data-lang="en">Abstracts</span><span data-lang="zh">中英文摘要</span></td><td><code>frontpages/my_cabstract.tex</code><br><code>frontpages/my_eabstract.tex</code></td></tr>
+            <tr><td><span data-lang="en">Acknowledgements</span><span data-lang="zh">誌謝</span></td><td><code>frontpages/my_ackn.tex</code></td></tr>
+            <tr><td><span data-lang="en">List of symbols</span><span data-lang="zh">符號說明</span></td><td><code>frontpages/my_symbols.tex</code></td></tr>
+            <tr><td><span data-lang="en">Chapters</span><span data-lang="zh">各章內容</span></td><td><code>sections/*.tex</code></td></tr>
+            <tr><td><span data-lang="en">References</span><span data-lang="zh">參考文獻</span></td><td><code>my_bib.bib</code></td></tr>
+            <tr><td><span data-lang="en">Appendix &amp; vitae</span><span data-lang="zh">附錄與自傳</span></td><td><code>backpages/my_appendix.tex</code><br><code>backpages/my_vitae.tex</code> <small>(中文版本: <code>my_vita.tex</code>)</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <figure class="tree">
+<pre><code><span class="t-dir">English Version/</span>
+├── <b>my_ntust_thesis.tex</b>   <span class="t-note">← main file</span>
+├── my_ntust_thesis.sh
+├── <b>my_bib.bib</b>
+├── <span class="t-dir">frontpages/</span>
+│   ├── <b>my_names.tex</b>
+│   ├── <b>my_cabstract.tex</b>
+│   ├── <b>my_eabstract.tex</b>
+│   ├── <b>my_ackn.tex</b>
+│   ├── <b>my_symbols.tex</b>
+│   └── <span class="t-lock">ntust_frontpages.tex</span>
+├── <span class="t-dir">sections/</span>            <span class="t-note">← chapters</span>
+├── <span class="t-dir">backpages/</span>
+│   ├── <b>my_appendix.tex</b>
+│   ├── <b>my_vitae.tex</b>
+│   └── <span class="t-lock">ntust_backpages.tex</span>
+├── <span class="t-dir">figures/</span>
+├── <span class="t-dir">watermark/</span>
+├── <span class="t-lock">ntust_report.cls</span>
+└── 標楷體.ttf</code></pre>
+      <figcaption>
+        <span class="legend"><b>my_*</b> <span data-lang="en">edit</span><span data-lang="zh">可修改</span></span>
+        <span class="legend"><span class="t-lock">ntust_*</span> <span data-lang="en">do not modify</span><span data-lang="zh">請勿更動</span></span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================== Compile ============================== -->
+<section id="compile" class="section">
+  <div class="container narrow">
+    <header class="section-head">
+      <h2><span data-lang="en">Compiling</span><span data-lang="zh">編譯方式</span></h2>
+      <p>
+        <span data-lang="en">The table of contents, cross-references, and bibliography need the full sequence <code>xelatex → bibtex → xelatex → xelatex</code>. Pick whichever way suits you.</span>
+        <span data-lang="zh">目錄、交互參照與參考文獻需要完整的編譯流程 <code>xelatex → bibtex → xelatex → xelatex</code>。請選擇適合你的方式。</span>
+      </p>
+    </header>
+
+    <div class="tabs" data-tabs>
+      <div class="tab-list" role="tablist" aria-label="Compile method">
+        <button type="button" role="tab" id="tab-c-script" aria-controls="panel-c-script" aria-selected="true"><span data-lang="en">Build script</span><span data-lang="zh">編譯腳本</span></button>
+        <button type="button" role="tab" id="tab-c-manual" aria-controls="panel-c-manual" aria-selected="false"><span data-lang="en">Manual</span><span data-lang="zh">手動</span></button>
+        <button type="button" role="tab" id="tab-c-latexmk" aria-controls="panel-c-latexmk" aria-selected="false">latexmk</button>
+        <button type="button" role="tab" id="tab-c-vscode" aria-controls="panel-c-vscode" aria-selected="false">VS Code</button>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-c-script" aria-labelledby="tab-c-script">
+        <p><span data-lang="en">macOS / Linux, from inside the edition folder:</span><span data-lang="zh">macOS / Linux，在版本資料夾內執行：</span></p>
+        <pre><code>bash my_ntust_thesis.sh</code></pre>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-c-manual" aria-labelledby="tab-c-manual">
+        <p><span data-lang="en">Works on every platform, including the Windows command prompt:</span><span data-lang="zh">適用於所有平台，包括 Windows 命令提示字元：</span></p>
+        <pre><code>xelatex my_ntust_thesis.tex
+bibtex  my_ntust_thesis
+xelatex my_ntust_thesis.tex
+xelatex my_ntust_thesis.tex</code></pre>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-c-latexmk" aria-labelledby="tab-c-latexmk">
+        <p><span data-lang="en"><code>latexmk</code> (bundled with TeX Live and MacTeX) reruns XeLaTeX and BibTeX as often as needed:</span><span data-lang="zh"><code>latexmk</code>（TeX Live 與 MacTeX 皆已內建）會自動重複執行 XeLaTeX 與 BibTeX 直到結果穩定：</span></p>
+        <pre><code>latexmk -xelatex my_ntust_thesis.tex</code></pre>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-c-vscode" aria-labelledby="tab-c-vscode">
+        <p><span data-lang="en">With the <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a> extension, add this recipe to your <code>settings.json</code>:</span><span data-lang="zh">使用 <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a> 擴充套件時，將以下設定加入 <code>settings.json</code>：</span></p>
+        <pre><code>"latex-workshop.latex.recipes": [
+  {
+    "name": "xelatex ➞ bibtex ➞ xelatex × 2",
+    "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+  }
+],
+"latex-workshop.latex.tools": [
+  {
+    "name": "xelatex",
+    "command": "xelatex",
+    "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+  },
+  {
+    "name": "bibtex",
+    "command": "bibtex",
+    "args": ["%DOCFILE%"]
+  }
+]</code></pre>
+      </div>
+    </div>
+    <p class="note">
+      <span data-lang="en"><strong>Tip:</strong> while drafting, comment out the <code>\input{frontpages/…}</code> and <code>\input{backpages/…}</code> lines in <code>my_ntust_thesis.tex</code> to compile faster.</span>
+      <span data-lang="zh"><strong>小技巧：</strong>撰寫草稿時，可在 <code>my_ntust_thesis.tex</code> 中將 <code>\input{frontpages/…}</code> 與 <code>\input{backpages/…}</code> 註解掉，以加快編譯速度。</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section id="faq" class="section section-alt">
+  <div class="container narrow">
+    <header class="section-head">
+      <h2><span data-lang="en">FAQ &amp; troubleshooting</span><span data-lang="zh">常見問題與疑難排解</span></h2>
+    </header>
+    <div class="faq">
+      <details>
+        <summary><span data-lang="en"><code>fontspec error: "font-not-found"</code> — what now?</span><span data-lang="zh">出現 <code>fontspec error: "font-not-found"</code> 怎麼辦？</span></summary>
+        <div>
+          <p><span data-lang="en">For <em>AR PL KaitiM Big5</em>, install <code>標楷體.ttf</code> from the edition folder and recompile. For <em>Times New Roman</em>, install the font, or change <code>\setmainfont{…}</code> in <code>my_ntust_thesis.tex</code> to a font you have, such as <code>TeX Gyre Termes</code>, a free Times clone included in TeX Live.</span><span data-lang="zh">若找不到 <em>AR PL KaitiM Big5</em>，請安裝版本資料夾中的 <code>標楷體.ttf</code> 後重新編譯。若找不到 <em>Times New Roman</em>，請安裝該字型，或將 <code>my_ntust_thesis.tex</code> 中的 <code>\setmainfont{…}</code> 改成已安裝的字型，例如 TeX Live 內建、與 Times 相近的免費字型 <code>TeX Gyre Termes</code>。</span></p>
+        </div>
+      </details>
+      <details>
+        <summary><span data-lang="en">The table of contents or citations show <code>??</code></span><span data-lang="zh">目錄或引用顯示 <code>??</code></span></summary>
+        <div>
+          <p><span data-lang="en">A single <code>xelatex</code> run is not enough. Run the full sequence (or <code>latexmk -xelatex</code>) so BibTeX and the cross-references can resolve.</span><span data-lang="zh">只執行一次 <code>xelatex</code> 是不夠的。請完整執行四次編譯流程（或使用 <code>latexmk -xelatex</code>），讓 BibTeX 與交互參照能正確產生。</span></p>
+        </div>
+      </details>
+      <details>
+        <summary><span data-lang="en">Can I compile with pdfLaTeX?</span><span data-lang="zh">可以用 pdfLaTeX 編譯嗎？</span></summary>
+        <div>
+          <p><span data-lang="en">No. The template uses <code>fontspec</code> and <code>xeCJK</code>, which require <strong>XeLaTeX</strong>. pdfLaTeX fails with font and CJK errors.</span><span data-lang="zh">不行。本範本使用 <code>fontspec</code> 與 <code>xeCJK</code>，必須以 <strong>XeLaTeX</strong> 編譯；使用 pdfLaTeX 會出現字型與中文相關錯誤。</span></p>
+        </div>
+      </details>
+      <details>
+        <summary><span data-lang="en">How do I turn on the NTUST watermark?</span><span data-lang="zh">如何加上臺科大浮水印？</span></summary>
+        <div>
+          <p><span data-lang="en">It is off by default. Uncomment this line in <code>common_env.tex</code> of your edition:</span><span data-lang="zh">浮水印預設為關閉。請在所用版本的 <code>common_env.tex</code> 中取消以下這行的註解：</span></p>
+          <pre><code>\input{watermark/ntust_watermark.tex}</code></pre>
+        </div>
+      </details>
+      <details>
+        <summary><span data-lang="en">Where do the recommendation letter and approval form go?</span><span data-lang="zh">指導教授推薦書與口試委員審定書放在哪裡？</span></summary>
+        <div>
+          <p><span data-lang="en">The template reserves blank pages for both and lists them in the table of contents. After your oral defense, replace those pages with the signed scans before binding.</span><span data-lang="zh">範本已為兩者預留空白頁並列入目錄。口試完成後，在裝訂前將這些頁面替換為已簽名的掃描檔即可。</span></p>
+        </div>
+      </details>
+      <details>
+        <summary><span data-lang="en">Can I use Overleaf?</span><span data-lang="zh">可以在 Overleaf 上使用嗎？</span></summary>
+        <div>
+          <p><span data-lang="en">Usually, with a few changes. Upload one edition folder as a new project and set the compiler to <strong>XeLaTeX</strong> in the project menu. Overleaf cannot see fonts installed on your computer, so you may need to load the bundled font by file name and switch the Latin font to <code>TeX Gyre Termes</code>. The maintainers do not test on Overleaf, so please <a href="{{ repo }}/issues">report what worked for you</a>.</span><span data-lang="zh">通常可以，但需做些調整。將其中一個版本的資料夾上傳為新專案，並在選單中將編譯器設為 <strong>XeLaTeX</strong>。Overleaf 無法使用你電腦上安裝的字型，因此可能需要以檔名載入附帶的字型，並把英文字型改為 <code>TeX Gyre Termes</code>。維護者並未在 Overleaf 上測試，歡迎<a href="{{ repo }}/issues">分享你的做法</a>。</span></p>
+        </div>
+      </details>
+      <details>
+        <summary><span data-lang="en">Is this the official NTUST template? Is it up to date?</span><span data-lang="zh">這是學校官方範本嗎？是否為最新格式？</span></summary>
+        <div>
+          <p><span data-lang="en">It is a community template, not an official NTUST release. Its settings were last aligned with the 2018 dissertation submission rules. Formatting rules change, so check the current guidelines from your department and the NTUST library, and <a href="{{ '/CONTRIBUTING.html' | relative_url }}">send a pull request</a> if something is out of date.</span><span data-lang="zh">本範本由社群維護，並非學校官方版本，設定最後依 2018 年的論文繳交規定更新。格式規定可能變動，請以系所及圖書館最新規定為準；若發現不符之處，歡迎<a href="{{ '/CONTRIBUTING.html' | relative_url }}">提交 Pull Request</a>。</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Community ============================== -->
+<section id="community" class="section">
+  <div class="container narrow center">
+    <header class="section-head">
+      <h2><span data-lang="en">Built by the NTUST community</span><span data-lang="zh">由臺科大社群共同打造</span></h2>
+      <p>
+        <span data-lang="en">Originally created by Ding-Jie Huang (黃鼎傑) at the CNS Laboratory, migrated to GitHub and maintained by Hadziq Fabroyir, and improved by students who used it.</span>
+        <span data-lang="zh">最初由 CNS 實驗室的黃鼎傑建立，之後由 Hadziq Fabroyir 移至 GitHub 並持續維護，也感謝每一位使用者的改進。</span>
+      </p>
+    </header>
+    <ul class="avatars">
+      <li><a href="https://github.com/hadziq" title="Hadziq Fabroyir"><img src="https://github.com/hadziq.png?size=128" alt="hadziq" width="64" height="64" loading="lazy"></a></li>
+      <li><a href="https://github.com/wazho" title="Ze-Hao Wang (Salmon)"><img src="https://github.com/wazho.png?size=128" alt="wazho" width="64" height="64" loading="lazy"></a></li>
+      <li><a href="https://github.com/BoChengHuang" title="BoCheng Huang"><img src="https://github.com/BoChengHuang.png?size=128" alt="BoChengHuang" width="64" height="64" loading="lazy"></a></li>
+      <li><a href="https://github.com/sheiun" title="雪煾 (sheiun)"><img src="https://github.com/sheiun.png?size=128" alt="sheiun" width="64" height="64" loading="lazy"></a></li>
+      <li><a href="https://github.com/yc5" title="yc5"><img src="https://github.com/yc5.png?size=128" alt="yc5" width="64" height="64" loading="lazy"></a></li>
+    </ul>
+    <div class="cta cta-center">
+      <a class="btn btn-secondary" href="{{ '/CONTRIBUTORS.html' | relative_url }}"><span data-lang="en">Meet the contributors</span><span data-lang="zh">認識貢獻者</span></a>
+      <a class="btn btn-secondary" href="{{ '/CONTRIBUTING.html' | relative_url }}"><span data-lang="en">How to contribute</span><span data-lang="zh">如何參與貢獻</span></a>
+    </div>
+  </div>
+</section>

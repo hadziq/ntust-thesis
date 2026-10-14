@@ -12,10 +12,13 @@
 \usepackage{titletoc}
 \usepackage[nospace]{cite}  % for smart citation
 \usepackage{geometry}  % for easy margin settings
-\usepackage{subfigure}  % for subfigure
+\usepackage{subcaption}  % 子圖 for sub-figures/sub-tables，同時支援 subfigure 環境與 \subfloat
+% 請勿同時載入 subfig 或舊的 subfigure 套件，會互相衝突。
+% 在 subfigure 環境中，\label{} 必須放在 \caption{} 之後（可用空的 \caption{}），否則 \ref{} 會顯示 ??
+% 範例請見 example/example_body.tex
 \usepackage{multirow}
 %\usepackage[dvipdfm]{graphicx}  % for graphic   using eps
-\usepackage{graphicx}  % for graphic   using eps
+\usepackage{graphicx}  % 插圖 for \includegraphics
 
 % Support the Chinese indent for the first line.
 % 因應中文書寫習慣，每段首行進行縮排。
@@ -23,7 +26,6 @@
 
 %\usepackage{epstopdf} % 當使用pdflatex時打開，如使用latex則不需開啟，此功能為將xxx.eps 自動判讀為XXX.pdf
 
-%\usepackage{subfig} 
 \usepackage{algorithmic}  %演算法使用
 \usepackage{algorithm}
 

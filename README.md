@@ -11,7 +11,7 @@ A LaTeX template for Master's theses and Ph.D. dissertations at National Taiwan 
 [![GitHub stars](https://img.shields.io/github/stars/hadziq/ntust-thesis?style=social)](https://github.com/hadziq/ntust-thesis/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/hadziq/ntust-thesis?style=social)](https://github.com/hadziq/ntust-thesis/network/members)
 
-[English](#english) · [中文說明](#中文說明) · [Contributors](#contributors) · [License](#license)
+[**Website**](https://hadziq.github.io/ntust-thesis/) · [English](#english) · [中文說明](#中文說明) · [Contributors](#contributors) · [License](#license)
 
 </div>
 
