@@ -7,9 +7,10 @@ It produces the NTUST cover, the front pages (abstracts, acknowledgements, table
 
 ## Before You Start
 
-1. Install a recent TeX distribution: [MacTeX](https://tug.org/mactex/) (macOS), [MiKTeX](https://miktex.org/) or [TeX Live](https://tug.org/texlive/) (Windows/Linux).
-2. Install the font **標楷體.ttf** (*AR PL KaitiM Big5*) bundled in this folder.
-3. Make sure **Times New Roman** is installed. If it is not, change `\setmainfont{...}` in `my_ntust_thesis.tex` to a font you have, such as `TeX Gyre Termes`.
+1. Install a recent TeX distribution: [MacTeX](https://tug.org/mactex/) (macOS), [MiKTeX](https://miktex.org/) or [TeX Live](https://tug.org/texlive/) (Windows/Linux). Alternatively, use [Overleaf](https://www.overleaf.com) with the **XeLaTeX** compiler (see [Using Overleaf](../README.md#using-overleaf)).
+2. *(Optional)* Install the font **標楷體.ttf** (*AR PL KaitiM Big5*) bundled in this folder. If it is not installed, the bundled copy is loaded directly.
+3. *(Optional)* Install **Times New Roman**. If it is not installed, *TeX Gyre Termes* (included in TeX Live) is used instead.
+4. The body text is 12pt by default. To change it, edit `\documentclass[12pt, a4paper]{ntust_report}` in `my_ntust_thesis.tex` (`10pt`, `11pt`, and `14pt` are also available).
 
 ## Files to Edit
 
@@ -26,10 +27,6 @@ Only edit files whose names start with `my_`, plus your chapters in `sections/`.
 | References (BibTeX) | `my_bib.bib` |
 | Appendix | `backpages/my_appendix.tex` |
 | Curriculum vitae | `backpages/my_vitae.tex` |
-
-p.s.
-Please install the latest TeX engine on your computer (e.g. MacTeX for macOS, MiKTeX for Windows OS), or use Overleaf with the XeLaTeX compiler (see the main README).
-Installing the font "標楷體.ttf" is optional: if it is not installed, the bundled copy in this folder is loaded directly.
 
 Files starting with `ntust_` (`ntust_report.cls`, `frontpages/ntust_frontpages.tex`, `backpages/ntust_backpages.tex`) define the official layout. Please do not modify them.
 

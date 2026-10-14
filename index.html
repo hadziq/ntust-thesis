@@ -172,8 +172,8 @@ body_class: home
         <pre><code>git clone https://github.com/{{ site.repository }}.git</code></pre>
       </li>
       <li>
-        <h3><span data-lang="en">Pick an edition &amp; install the fonts</span><span data-lang="zh">選擇版本並安裝字型</span></h3>
-        <p><span data-lang="en">Work inside <code>English Version/</code> or <code>中文版本/</code>. Install <code>標楷體.ttf</code> from that folder and make sure Times New Roman is available.</span><span data-lang="zh">在 <code>English Version/</code> 或 <code>中文版本/</code> 資料夾內作業。安裝該資料夾中的 <code>標楷體.ttf</code>，並確認系統已有 Times New Roman。</span></p>
+        <h3><span data-lang="en">Pick an edition</span><span data-lang="zh">選擇版本</span></h3>
+        <p><span data-lang="en">Work inside <code>English Version/</code> or <code>中文版本/</code>. No font installation is needed: the bundled <code>標楷體.ttf</code> is loaded directly, and TeX Gyre Termes replaces Times New Roman if it is missing.</span><span data-lang="zh">在 <code>English Version/</code> 或 <code>中文版本/</code> 資料夾內作業。無須安裝字型：範本會直接載入資料夾中的 <code>標楷體.ttf</code>，若沒有 Times New Roman 則改用 TeX Gyre Termes。</span></p>
       </li>
       <li>
         <h3><span data-lang="en">Compile</span><span data-lang="zh">編譯</span></h3>
@@ -314,7 +314,7 @@ xelatex my_ntust_thesis.tex</code></pre>
       <details>
         <summary><span data-lang="en"><code>fontspec error: "font-not-found"</code> — what now?</span><span data-lang="zh">出現 <code>fontspec error: "font-not-found"</code> 怎麼辦？</span></summary>
         <div>
-          <p><span data-lang="en">For <em>AR PL KaitiM Big5</em>, install <code>標楷體.ttf</code> from the edition folder and recompile. For <em>Times New Roman</em>, install the font, or change <code>\setmainfont{…}</code> in <code>my_ntust_thesis.tex</code> to a font you have, such as <code>TeX Gyre Termes</code>, a free Times clone included in TeX Live.</span><span data-lang="zh">若找不到 <em>AR PL KaitiM Big5</em>，請安裝版本資料夾中的 <code>標楷體.ttf</code> 後重新編譯。若找不到 <em>Times New Roman</em>，請安裝該字型，或將 <code>my_ntust_thesis.tex</code> 中的 <code>\setmainfont{…}</code> 改成已安裝的字型，例如 TeX Live 內建、與 Times 相近的免費字型 <code>TeX Gyre Termes</code>。</span></p>
+          <p><span data-lang="en">The template falls back to the bundled <code>標楷體.ttf</code> and to <code>TeX Gyre Termes</code> automatically, so this usually means <code>標楷體.ttf</code> is not in the same folder as <code>my_ntust_thesis.tex</code> (on Overleaf: the project root). Put it back, or install the font, and recompile.</span><span data-lang="zh">範本會自動改用附帶的 <code>標楷體.ttf</code> 與 <code>TeX Gyre Termes</code>，因此出現此錯誤通常表示 <code>標楷體.ttf</code> 不在 <code>my_ntust_thesis.tex</code> 所在的資料夾（在 Overleaf 上則是專案根目錄）。請將檔案放回或安裝該字型後重新編譯。</span></p>
         </div>
       </details>
       <details>
@@ -345,7 +345,7 @@ xelatex my_ntust_thesis.tex</code></pre>
       <details>
         <summary><span data-lang="en">Can I use Overleaf?</span><span data-lang="zh">可以在 Overleaf 上使用嗎？</span></summary>
         <div>
-          <p><span data-lang="en">Usually, with a few changes. Upload one edition folder as a new project and set the compiler to <strong>XeLaTeX</strong> in the project menu. Overleaf cannot see fonts installed on your computer, so you may need to load the bundled font by file name and switch the Latin font to <code>TeX Gyre Termes</code>. The maintainers do not test on Overleaf, so please <a href="{{ repo }}/issues">report what worked for you</a>.</span><span data-lang="zh">通常可以，但需做些調整。將其中一個版本的資料夾上傳為新專案，並在選單中將編譯器設為 <strong>XeLaTeX</strong>。Overleaf 無法使用你電腦上安裝的字型，因此可能需要以檔名載入附帶的字型，並把英文字型改為 <code>TeX Gyre Termes</code>。維護者並未在 Overleaf 上測試，歡迎<a href="{{ repo }}/issues">分享你的做法</a>。</span></p>
+          <p><span data-lang="en">Yes. Zip the <em>contents</em> of one edition folder so that <code>my_ntust_thesis.tex</code> is at the top level, upload it with <strong>New Project → Upload Project</strong>, and set the compiler to <strong>XeLaTeX</strong> in the project menu. No font setup is needed. See <a href="{{ repo }}#using-overleaf">Using Overleaf</a> for the full steps, and please <a href="{{ repo }}/issues">report any problems</a>.</span><span data-lang="zh">可以。將其中一個版本資料夾<em>內的檔案</em>壓縮成 ZIP（讓 <code>my_ntust_thesis.tex</code> 位於最上層），以 <strong>New Project → Upload Project</strong> 上傳，並在選單中將編譯器設為 <strong>XeLaTeX</strong>，無須另外設定字型。完整步驟請見<a href="{{ repo }}#使用-overleaf">使用 Overleaf</a>，若遇到問題歡迎<a href="{{ repo }}/issues">回報</a>。</span></p>
         </div>
       </details>
       <details>

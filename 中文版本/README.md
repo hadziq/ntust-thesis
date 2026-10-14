@@ -7,9 +7,10 @@
 
 ## 開始之前
 
-1. 安裝最新版的 TeX 環境：[MacTeX](https://tug.org/mactex/)（macOS）、[MiKTeX](https://miktex.org/) 或 [TeX Live](https://tug.org/texlive/)（Windows / Linux）。
-2. 安裝本資料夾中的字型 **標楷體.ttf**（*AR PL KaitiM Big5*）。
-3. 確認系統已安裝 **Times New Roman**。若沒有，可將 `my_ntust_thesis.tex` 中的 `\setmainfont{...}` 改為已安裝的字型，例如 `TeX Gyre Termes`。
+1. 安裝最新版的 TeX 環境：[MacTeX](https://tug.org/mactex/)（macOS）、[MiKTeX](https://miktex.org/) 或 [TeX Live](https://tug.org/texlive/)（Windows / Linux）；或改用 [Overleaf](https://www.overleaf.com) 並將編譯器設為 **XeLaTeX**（詳見[使用 Overleaf](../README.md#使用-overleaf)）。
+2. （選用）安裝本資料夾中的字型 **標楷體.ttf**（*AR PL KaitiM Big5*）。若未安裝，範本會直接載入本資料夾內的字型檔。
+3. （選用）安裝 **Times New Roman**。若未安裝，英文字型會改用 TeX Live 內建的 *TeX Gyre Termes*。
+4. 內文字體大小預設為 12pt，可在 `my_ntust_thesis.tex` 的 `\documentclass[12pt, a4paper]{ntust_report}` 改為 `10pt`、`11pt` 或 `14pt`。
 
 ## 需要修改的檔案
 
@@ -26,9 +27,6 @@
 | 參考文獻（BibTeX） | `my_bib.bib` |
 | 附錄 | `backpages/my_appendix.tex` |
 | 自傳 | `backpages/my_vita.tex` |
-
-p.s. 要執行上述命令，煩請確認先更新 MacTeX (macOS) 或 MiKTeX (Windows)，或改用 Overleaf 並將編譯器設為 XeLaTeX（詳見主 README）。
-字體“標楷體.ttf”可選擇是否安裝：若未安裝，範本會直接載入本資料夾內的字體檔。
 
 以 `ntust_` 開頭的檔案（`ntust_report.cls`、`frontpages/ntust_frontpages.tex`、`backpages/ntust_backpages.tex`）為學校規定格式，請勿更動。
 
