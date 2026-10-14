@@ -48,6 +48,7 @@ defaults:
 # The landing page replaces the repository README on the site.
 exclude:
   - README.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - vendor
