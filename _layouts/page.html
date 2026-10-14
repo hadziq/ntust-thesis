@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="container doc-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ page.title | default: page.name }}</span>
+  </nav>
+  <article class="prose">
+    {% if page.title and page.hide_title != true %}<h1 class="doc-title">{{ page.title }}</h1>{% endif %}
+    {{ content }}
+  </article>
+  {% assign edit_path = page.edit_path | default: page.path %}{% if edit_path %}
+  <p class="doc-edit">
+    <a href="https://github.com/{{ site.repository }}/blob/master/{{ edit_path | uri_escape }}">
+      <span data-lang="en">Edit this page on GitHub</span><span data-lang="zh">在 GitHub 上編輯此頁</span>
+    </a>
+  </p>
+  {% endif %}
+</div>

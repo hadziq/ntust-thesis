@@ -1,1 +1,56 @@
-theme: jekyll-theme-cayman
+# Site settings for GitHub Pages (https://hadziq.github.io/ntust-thesis/)
+title: NTUST Thesis LaTeX Template
+tagline: 臺科大碩博士論文 LaTeX 範本
+description: >-
+  A free XeLaTeX template for Master's theses and Ph.D. dissertations at
+  National Taiwan University of Science and Technology (NTUST), with English
+  and Chinese editions. 國立臺灣科技大學碩博士論文 LaTeX 範本。
+lang: en
+repository: hadziq/ntust-thesis
+author:
+  name: Hadziq Fabroyir
+  url: https://github.com/hadziq
+image: /assets/img/og-image.jpg
+
+# Template downloads shown on the landing page
+download_zip: https://github.com/hadziq/ntust-thesis/archive/refs/heads/master.zip
+sample_pdf_en: "English%20Version/my_ntust_thesis.pdf"
+sample_pdf_zh: "%E4%B8%AD%E6%96%87%E7%89%88%E6%9C%AC/my_ntust_thesis.pdf"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    disable: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+  collections: false
+
+titles_from_headings:
+  strip_title: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# The landing page replaces the repository README on the site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - "**/*.aux"
+  - "**/*.log"
+  - "**/*.xdv"
